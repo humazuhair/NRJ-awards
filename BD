@@ -1,0 +1,45 @@
+drop table representants;
+drop table  trophee;
+
+-- create tables
+
+create table representants(
+ award  varchar2(5) not null,
+ pays   varchar2(50) not null,
+ artiste varchar2(50) not null,
+  constraint pk_represent primary key (award,pays)
+);
+
+create table trophee(
+award  varchar2(5) not null,
+vainqueur varchar2(50) not null,
+categorie varchar2(100) not null,
+nomines  varchar2(400) not null,
+presentateur  varchar2(50) not null,
+constraint pk_trophee primary key (award,vainqueur,categorie)
+);
+
+-- insertion de donnees de la table trophee
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Révélation francophone de l''année','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Billie Eilish','Révélation internationale de l''année','Billie Eilish, Ava Max, Lil Nas X, Lewis Capaldi, Jorja Smith, Mabel','Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'BigFlo et Oli','Groupe ou duo francophone de l''année','BigFlo et Oli, Angèle et Roméo Elvis, Vitaa et Slimane, Kendji Girac et Claudio Capéo, Philippine et Gavin James', 'Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Lady Gaga et Bradley Cooper','Groupe ou duo international de l''année','Lady Gaga et Bradley Cooper, Shawn Mendes et Camila Cabello, Ed Sheeran et Justin Bieber, Lil Nas X et Billy Ray Cyrus, Jonas Brothers, Pedro Capo et Farruko et Alicia Keys', 'Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Matt Pokora','Artiste masculin francophone de l''année','Matt Pokora, Soprano, Slimane, Dadju, Gims, Kendji Girac','Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Ed Sheeran','Artiste masculin international de l''année','Ed Sheeran, Shawn Mendes, Post Malone, Sam Smith, Pedro Capo','Nikos Aliagas');
+
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Angèle','Artiste féminine francophone de l''année','Angèle, Aya Nakamura, Jenifer, Vitaa, Clara Luciani','Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Ariana Grande','Artiste féminine internationale de l''année','Ariana Grande, Camila Cabello, Lady Gaga, Taylor Swift, P!nk ','Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'BigFlo et Oli - Promesses','Clip de l''année','BigFlo et Oli - Promesses, Angèle et Roméo Elvis - Tout oublier, Soprano et Vincenzo - Le coach, Billie Eilish - Bad Guy, Ed sheeran et Justin Bieber - I Don''t Care, Lil Nas X et Billy Ray Cyrus - Old Town Road, Black M - Mon Beau Frère, Jonas Brothers - Sucker','Nikos Aliagas');
+
+----
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Revelation francophone','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Revelation francophone','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Revelation francophone','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
+
+
+     
+
+
