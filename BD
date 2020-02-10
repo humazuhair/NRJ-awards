@@ -122,6 +122,91 @@ insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
  values (2007, 'Diam's : La Boulette ','Chanson Francophone de l''année','Diam's : La Boulette, Faf La Rage : Pas le temps, Olivia Ruiz : J'traîne des pieds, Shy'm : Femme de couleur, Faudel : Mon pays ',' Arthur');
 
+--2008
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Christophe Willem ','Révélation française de l''année',' Christophe Willem, Justice,Melissa M, Vitaa, Yael Naim',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Mika ','Révélation internationale de l''année','Mika, Amy Winehouse, Fall Out Boy, Plain White T's, Sean Kingston ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Jenifer ','Artiste féminine française de l''année','Jenifer, Amel Bent, Céline Dion, Shy'm, Zazie ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Avril Lavigne ','Artiste féminine internationale de l''année','Avril Lavigne, Alicia Keys, Fergie, Nelly Furtado, Rihanna ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Christophe Maé ','Artiste masculin français de l''année','Christophe Maé, Calogero, David Guetta, Emmanuel Moire, MC Solaar ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Justin Timberlake ','Artiste masculin international de l''année','Justin Timberlake, Akon, James Blunt, Juanes, Timbaland ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Superbus ','Groupe/duo français de l''année',' Superbus, Diam's et  Vitaa, Fatal Bazooka, IAM, Magic System',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Tokio Hotel ','Groupe/duo international de l''année','Tokio Hotel, 50 Cent et Justin Timberlake, Linkin Park, Maroon 5, P. Diddy et Keyshia Cole ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Rihanna - Don't Stop the Music ','Chanson internationale de l''année','Rihanna - Don't Stop the Music, James Blunt - 1973, MIKA - Relax, Take It Easy, Sean Kingston - Beautiful Girls,Timbaland featuring Keri Hilson - The Way I Are  ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Christophe Willem - Inventaire ','Album français de l''année','Christophe Willem - Inventaire, Bob Sinclar - Soundz of Freedom, Christophe Maé - Mon Paradis, David Guetta - Pop Life, Vanessa Paradis - Divinidylle ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Britney Spears - Blackout ','Album international de l''année','Britney Spears - Blackout, Amy Winehouse - Back to Black, James Blunt - All the Lost Souls, MIKA - Life in Cartoon Motion, Rihanna - Good Girl Gone Bad ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Fatal Bazooka featuring Yelle - Parle à ma main ','Clip de l''année','Fatal Bazooka featuring Yelle - Parle à ma main, 50 Cent featuring Justin Timberlake & Timbaland - Ayo Technology, Calogero - Pomme C, Justice - D.A.N.C.E, MIKA - Relax, Take It Easy ',' Benjamin Castaldi');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2008, 'Christophe Maé - On s'attache ','Chanson française de l''année','Christophe Maé - On s'attache, Christophe Willem - Double je, Jenifer - Tourner ma page, Superbus - Travel the World,Vanessa Paradis - Dès que j'te vois ',' Benjamin Castaldi');
+
+
+
+--2009
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Jenifer ','Artiste féminine française de l''année','Jenifer, Mylène Farmer, Nâdiya, Shy'm, Zazie ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Christophe Maé ','Artiste masculin français de l''année','Christophe Maé, Renan Luce, David Guetta, Laurent Wolf, Martin Solveig ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Britney Spears ','Artiste féminine internationale de l''année','Britney Spears, Beyoncé, Christina Aguilera, P!nk, Rihanna ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Enrique Iglesias ','Artiste masculin international de l''année','Enrique Iglesias, Akon, Chris Brown, James Blunt, Lenny Kravitz ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Zaho ','Révélation française de l''année','Zaho, Grégoire,Marc Antoine, Sheryfa Luna, William Baldé',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Jonas Brothers ','Révélation internationale de l''année','Jonas Brothers, Amy Macdonald, Duffy, Katy Perry, Leona Lewis ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Mylène Farmer - Point de Suture ','Album francophone de l''année','Mylène Farmer - Point de Suture, BB Brunes - Blonde comme moi, Christophe Maé - Comme à la maison, Julien Doré - Ersatz, Renan Luce - Repenti ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Katy Perry - One of the Boys ','Album international de l''année','Amy Macdonald - This Is the Life, Coldplay - Viva la Vida or Death and All His Friends, Duffy - Rockferry, Katy Perry - One of the Boys,P!nk - Funhouse ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Cléopâtre ','Groupe/duo français de l''année','Cléopâtre, Enrique Iglesias et , Stanislas et CalogeroNâdiya, Magic System, Sheryfa Luna et Mathieu Edward ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'The Pussycat Dolls ','Groupe/duo international de l''année','The Pussycat Dolls, Coldplay, Estelle et Kanye West, Fall Out Boy, Madcon ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, ' ','Chanson Francophone de l''année',' ',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Christophe Maé - Belle demoiselle ','Chanson Francophone de l''année','Christophe Maé - Belle demoiselle, Stanislas et Calogero - La débâcle des sentiments, Julien Doré - Les Limites, Enrique Iglesias et Nâdiya - Tired of Being Sorry, William Baldé - Rayon de Soleil',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Rihanna - Disturbia ','Chanson internationale de l''année','Rihanna - Disturbia, Coldplay - Viva la Vida, Estelle et Kanye West - American Boy, Katy Perry - I Kissed a Girl , Madcon - Beggin',' Nikos Aliagas');
+
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
+ values (2009, 'Britney Spears - Womanizer ','Clip de l''année','Fall Out Boy - I Don't Care, Britney Spears - Womanizer, Martin Solveig - C'est la vie, Stanislas et Calogero - La débâcle des sentiments, Zaho - C'est chelou ',' Nikos Aliagas');
+
 
 ---- 2013 - 2010 -----
 
