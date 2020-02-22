@@ -41,17 +41,15 @@ insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (201
 
 
 
-----2006-2010
-
-
+2006
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) 
-values (2006, ' ','Artiste masculin francophone de l''année','Calogero, Gérald de Palmas, Marc Lavoine, Raphael, Yannick Noah ','Anthony Kavanagh ');
+values (2006, ' Raphael','Artiste masculin francophone de l''année','Calogero, Gérald de Palmas, Marc Lavoine, Raphael, Yannick Noah ','Anthony Kavanagh ');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) 
 values (2006, 'Robbie Williams ','Artiste masculin international de l''année','Robbie Williams, Robbie Williams, 50 Cent, Sean Paul, Ricky Martin ','Anthony Kavanagh ');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) 
-values (2006, 'Jenifer, Céline Dion, Lââm, Mylène Farmer, Tina Arena ','Artiste féminine francophone de l''année',' ','Anthony Kavanagh ');
+values (2006, 'Jenifer ','Artiste féminine francophone de l''année','Jenifer, Céline Dion, Lââm, Mylène Farmer, Tina Arena ','Anthony Kavanagh ');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' Madonna','Artiste féminine internationale de l''année','Madonna, Shakira, Natalie Imbruglia, Gwen Stefani, Mariah Carey ','Anthony Kavanagh ');
 
@@ -60,31 +58,28 @@ insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (200
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' James Blunt','Révélation internationale de l''année','James Blunt, Daniel Powter, Akon, Lemar, The Pussycat Dolls ','Anthony Kavanagh ');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2006, 'Mylène Farmer : Avant que l'ombre... ','Album francophone de l''année',' Raphael : Caravane, Gérald de Palmas : Un homme sans racines, Calogero : Live 1.0, Kyo : 300 lésions, Mylène Farmer : Avant que l'ombre...','Anthony Kavanagh ');
+ values (2006, 'Mylène Farmer - Avant que l'ombre... ','Album francophone de l''année',' Raphael - Caravane, Gérald de Palmas - Un homme sans racines, Calogero - Live 1.0, Kyo - 300 lésions, Mylène Farmer - Avant que l'ombre...','Anthony Kavanagh ');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' ','Révélation francophone de l''année',' ','Anthony Kavanagh ');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' The Black Eyed Peas : Monkey Business','Album international de l''année','The Black Eyed Peas : Monkey Business, Moby : Hotel,  Coldplay : X&Y, Robbie Williams : Intensive Care, Mariah Carey : The Emancipation of Mimi ','Anthony Kavanagh ');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' The Black Eyed Peas - Monkey Business','Album international de l''année','The Black Eyed Peas - Monkey Business, Moby - Hotel,  Coldplay - X&Y, Robbie Williams - Intensive Care, Mariah Carey - The Emancipation of Mimi ','Anthony Kavanagh ');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' M. Pokora : Elle me contrôle','Chanson francophone de l''année','M. Pokora : Elle me contrôle, Emmanuel Moire : Mon Essentiel, Gérald de Palmas : Elle habite ici, Lââm : Petite Sœur, Raphael : Caravane ','Anthony Kavanagh ');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' M. Pokora - Elle me contrôle','Chanson francophone de l''année','M. Pokora - Elle me contrôle, Emmanuel Moire - Mon Essentiel, Gérald de Palmas - Elle habite ici, Lââm - Petite Sœur, Raphael - Caravane ','Anthony Kavanagh ');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' Shakira : La Tortura','Chanson internationale de l''année','Daniel Powter : Bad Day, Lemar : If There's Any Justice, Akon : Lonely, The Black Eyed Peas : Don't Lie, Shakira : La Tortura','Anthony Kavanagh ');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' Shakira - La Tortura','Chanson internationale de l''année','Daniel Powter - Bad Day, Lemar - If There's Any Justice, Akon - Lonely, The Black Eyed Peas - Don't Lie, Shakira - La Tortura','Anthony Kavanagh ');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, 'M. Pokora : Elle me contrôle ','Clip de l''année','M. Pokora : Elle me contrôle, Gorillaz : Feel Good Inc.,  Robbie Williams : Tripping, Sinsemilia : Tout le bonheur du monde, Shakira : La Tortura ','Anthony Kavanagh ');
+insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, 'M. Pokora - Elle me contrôle ','Clip de l''année','M. Pokora - Elle me contrôle, Gorillaz - Feel Good Inc.,  Robbie Williams - Tripping, Sinsemilia - Tout le bonheur du monde, Shakira - La Tortura ','Anthony Kavanagh ');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' The Black Eyed Peas','Groupe/duo/troupe international de l''année','The Black Eyed Peas, U2, Depeche Mode, Green Day, Coldplay ','Anthony Kavanagh ');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, 'Le Roi Soleil ','Groupe/duo/troupe francophone de l''année','Le Roi Soleil, Yannick Noah et Disiz,  Kyo, Tryo, Magic System ','Anthony Kavanagh ');
 
-
+2007
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
  values (2007, 'Christophe Maé ','Révélation francophone de l''année','Christophe Maé, Faf La Rage, Najoua Belyzel, Olivia Ruiz, Shy'm ',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
  values (2007, 'Nelly Furtado ','Révélation internationale de l''année','Nelly Furtado, Cassie, James Morrison, Lily Allen, Rihanna ',' Arthur');
-
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, ' ','Révélation francophone de l''année',' ',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
  values (2007, 'M. Pokora ','Artiste masculin francophone de l''année','M. Pokora, Raphael, Pascal Obispo, Faudel, Corneille ',' Arthur');
@@ -102,7 +97,7 @@ insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
  values (2007, 'Evanescence ','Groupe / duo / troupe internationale de l''année','Evanescence, The Black Eyed Peas, Simple Plan, The Killers, The Pussycat Dolls ',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Diam's : Dans ma bulle ','Album francophone de l''année','Diam's : Dans ma bulle, Olivia Ruiz : La Femme chocolat, Yannick Noah : Charango, Nâdiya : Nâdiya, Pascal Obispo : Les Fleurs du bien ',' Arthur');
+ values (2007, 'Diam's - Dans ma bulle ','Album francophone de l''année','Diam's - Dans ma bulle, Olivia Ruiz - La Femme chocolat, Yannick Noah - Charango, Nâdiya - Nâdiya, Pascal Obispo - Les Fleurs du bien ',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
  values (2007, 'Bob Sinclar ','DJ de l''année','Bob Sinclar, David Guetta, David Vendetta, Martin Solveig, Laurent Wolf ',' Arthur');
@@ -111,16 +106,17 @@ insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
  values (2007, 'Le Roi Soleil ','Groupe / duo / troupe francophone de l''année','Le Roi Soleil, Fight Aids, Indochine, Leslie /  Amine, Mylène Farmer /  Moby ',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Christina Aguilera : Back to Basics ','Album international de l''année','Christina Aguilera : Back to Basics, Madonna : Confessions on a Dance Floor, Justin Timberlake : FutureSex/LoveSounds, Red Hot Chili Peppers : Stadium Arcadium, Evanescence : The Open Door ',' Arthur');
+ values (2007, 'Christina Aguilera - Back to Basics ','Album international de l''année','Christina Aguilera - Back to Basics, Madonna - Confessions on a Dance Floor, Justin Timberlake - FutureSex/LoveSounds, Red Hot Chili Peppers - Stadium Arcadium, Evanescence - The Open Door ',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'M. Pokora : De retour ','Clip de l''année','M. Pokora : De retour, P!nk : Stupid Girls, Diam's : Jeune demoiselle, Bob Sinclar : Rock This Party, Evanescence : Call Me When You're Sober ',' Arthur');
+ values (2007, 'M. Pokora - De retour ','Clip de l''année','M. Pokora - De retour, P!nk - Stupid Girls, Diam's - Jeune demoiselle, Bob Sinclar - Rock This Party, Evanescence - Call Me When You're Sober ',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Rihanna : Unfaithful ','Chanson Internationale de l''année','Christina Aguilera : Ain't No Other Man, Gnarls Barkley : Crazy, Shakira / Wyclef Jean : Hips Don't Lie , Nelly Furtado : Maneater, Rihanna : Unfaithful',' Arthur');
+ values (2007, 'Rihanna - Unfaithful ','Chanson Internationale de l''année','Christina Aguilera - Ain't No Other Man, Gnarls Barkley - Crazy, Shakira / Wyclef Jean - Hips Don't Lie , Nelly Furtado - Maneater, Rihanna - Unfaithful',' Arthur');
 
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Diam's : La Boulette ','Chanson Francophone de l''année','Diam's : La Boulette, Faf La Rage : Pas le temps, Olivia Ruiz : J'traîne des pieds, Shy'm : Femme de couleur, Faudel : Mon pays ',' Arthur');
+ values (2007, 'Diam's - La Boulette ','Chanson Francophone de l''année','Diam's - La Boulette, Faf La Rage - Pas le temps, Olivia Ruiz - J'traîne des pieds, Shy'm - Femme de couleur, Faudel - Mon pays ',' Arthur');
+
 
 --2008
 insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
