@@ -1,296 +1,645 @@
-drop table representants;
+
 drop table  trophee;
 
--- create tables
-
-create table representants(
- award  varchar2(5) not null,
- pays   varchar2(50) not null,
- artiste varchar2(50) not null,
-  constraint pk_represent primary key (award,pays)
-);
+-- create tables --
 
 create table trophee(
 award  varchar2(5) not null,
-vainqueur varchar2(50) not null,
+dateA varchar(10) not null,
+vainqueur varchar2(100) not null,
 categorie varchar2(100) not null,
-nomines  varchar2(400) not null,
+nomines  varchar2(400)  null,
 presentateur  varchar2(50) not null,
-constraint pk_trophee primary key (award,vainqueur,categorie)
+constraint pk_trophee primary key (award,dateA,categorie)
 );
+
 
 -- insertion de donnees de la table trophee
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Révélation francophone de l''année','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Billie Eilish','Révélation internationale de l''année','Billie Eilish, Ava Max, Lil Nas X, Lewis Capaldi, Jorja Smith, Mabel','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'BigFlo et Oli','Groupe ou duo francophone de l''année','BigFlo et Oli, Angèle et Roméo Elvis, Vitaa et Slimane, Kendji Girac et Claudio Capéo, Philippine et Gavin James', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Lady Gaga et Bradley Cooper','Groupe ou duo international de l''année','Lady Gaga et Bradley Cooper, Shawn Mendes et Camila Cabello, Ed Sheeran et Justin Bieber, Lil Nas X et Billy Ray Cyrus, Jonas Brothers, Pedro Capo et Farruko et Alicia Keys', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Matt Pokora','Artiste masculin francophone de l''année','Matt Pokora, Soprano, Slimane, Dadju, Gims, Kendji Girac','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Ed Sheeran','Artiste masculin international de l''année','Ed Sheeran, Shawn Mendes, Post Malone, Sam Smith, Pedro Capo','Nikos Aliagas');
+--2019
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Bilal Hassani','Révélation francophone de l''année','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Billie Eilish','Révélation internationale de l''année','Billie Eilish, Ava Max, Lil Nas X, Lewis Capaldi, Jorja Smith, Mabel','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','BigFlo et Oli','Groupe ou duo francophone de l''année','BigFlo et Oli, Angèle et Roméo Elvis, Vitaa et Slimane, Kendji Girac et Claudio Capéo, Philippine et Gavin James', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Lady Gaga et Bradley Cooper','Groupe ou duo international de l''année','Lady Gaga et Bradley Cooper, Shawn Mendes et Camila Cabello, Ed Sheeran et Justin Bieber, Lil Nas X et Billy Ray Cyrus, Jonas Brothers, Pedro Capo et Farruko et Alicia Keys', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Matt Pokora','Artiste masculin francophone de l''année','Matt Pokora, Soprano, Slimane, Dadju, Gims, Kendji Girac','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Ed Sheeran','Artiste masculin international de l''année','Ed Sheeran, Shawn Mendes, Post Malone, Sam Smith, Pedro Capo','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Angèle','Artiste féminine francophone de l''année','Angèle, Aya Nakamura, Jenifer, Vitaa, Clara Luciani','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Ariana Grande','Artiste féminine internationale de l''année','Ariana Grande, Camila Cabello, Lady Gaga, Taylor Swift, P!nk ','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','BigFlo et Oli - Promesses','Clip de l''année','BigFlo et Oli - Promesses, Angèle et Roméo Elvis - Tout oublier, Soprano et Vincenzo - Le coach, Billie Eilish - Bad Guy, Ed sheeran et Justin Bieber - I Don''t Care, Lil Nas X et Billy Ray Cyrus - Old Town Road, Black M - Mon Beau Frère, Jonas Brothers - Sucker','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','DJ Snake','DJ de l''année','DJ Snake, David Guetta, Martin Garrix, Calvin Harris, Ofenbach, Armin van Buuren','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Shawn Mendes et Camila Cabello - Senorita','Chanson internationale de l''année','Shawn Mendes et Camila Cabello - Senorita, Lil Nas X et Billy Ray Cyrus - Old Town Road, DJ Snake et J Balvin et Tyga - Loco Contigo, Lewis Capaldi - Someone You Loved, Calvin Harris et Rag''n''Bone Man - Giant, Pedro Capo et Farruko et Alicia Keys - Calma','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Angèle et Roméo Elvis - Tout oublier','Chanson francophone de l''année','Angèle et Roméo Elvis - Tout oublier, Soprano et Vincenzo - Le coach, Aya Nakamura - Pookie, Clara Luciani - La grenade, Kendji Girac et Claudio Capéo - Que Dieu me pardonne, Dadju - Compliqué ','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Jonas Brothers','Awards d''honneur',Null,'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Pedro Capo et Farruko et Alicia Keys - Calma','Titre certifié disque de platine',Null,'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2019,'9/11','Vitaa et Slimane - Versus','Album certifié disque de platine',Null,'Nikos Aliagas');
+
+--2018
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Dadju','Révélation francophone de l''année','Dadju, Aya Nakamura, Eddy de Pretto, Hoshi, Marwa Loud, Vegedream','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Camila Cabello','Révélation internationale de l''année','Camila Cabello, Alvaro Soler, Cardi B, Dua Lipa, Liam Payne, Post Malone','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','BigFlo et Oli','Groupe ou duo francophone de l''année','BigFlo et Oli, Hyphen Hyphen, Gims et Vianney, Naestro et Gims et Vitaa et Dadju et Slimane, Orelsan et Stromae, Vitaa et Claudio Capéo', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Imagine Dragons','Groupe ou duo international de l''année','Imagine Dragons, Calvin Harris et Dua Lipa, David Guetta et Sia, Maroon 5, Muse, Nicky Jam et J Balvin', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Soprano','Artiste masculin francophone de l''année','Soprano, Slimane, Gims, Kendji Girac, Amir, Orelsan','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Ed Sheeran','Artiste masculin international de l''année','Ed Sheeran, Shawn Mendes, Charlie Puth, Drake, The Weeknd, Justin Timberlake','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Jain','Artiste féminine francophone de l''année','Jain, Christine and the Queens, Jenifer, Vitaa, Louane, Zazie','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Ariana Grande','Artiste féminine internationale de l''année','Ariana Grande, Beyoncé, Dua Lipa, P!nk, Selena Gomez, Sia','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','BigFlo et Oli - Demain','Clip de l''année','BigFlo et Oli - Demain, Ariana Grande - No Tears Left to Cry, Drake - In My Feelings, Jain - Alright, Maroon 5 et Cardi B - Girls Like You, Orelsan - Basique','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','DJ Snake','DJ de l''année','DJ Snake, David Guetta, Feder, Calvin Harris, Ofenbach, Kygo','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Maroon 5 - Girls Like You','Chanson internationale de l''année','Maroon 5 - Girls Like You, Ariana Grande - No Tears Left to Cry, Calvin Harris et Dua Lipa - One kiss, Drake - God''s Plan, Kygo et Miguel - Remind Me To Forget, Nicky Jam  et J Balvin - X','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Kendji Girac - Pour oublier','Chanson francophone de l''année','Kendji Girac - Pour oublier, Gims et Vianney - La Même, Aya Nakamura - Djadja, Vitaa et Claudio Capéo - Un Peu de rêve, Eddy de Pretto - Kid, Dadju - Reine','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2018,'10/11','Muse, Shawn Mendes, Dua Lipa','Awards d''honneur',Null,'Nikos Aliagas');
 
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Angèle','Artiste féminine francophone de l''année','Angèle, Aya Nakamura, Jenifer, Vitaa, Clara Luciani','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Ariana Grande','Artiste féminine internationale de l''année','Ariana Grande, Camila Cabello, Lady Gaga, Taylor Swift, P!nk ','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'BigFlo et Oli - Promesses','Clip de l''année','BigFlo et Oli - Promesses, Angèle et Roméo Elvis - Tout oublier, Soprano et Vincenzo - Le coach, Billie Eilish - Bad Guy, Ed sheeran et Justin Bieber - I Don''t Care, Lil Nas X et Billy Ray Cyrus - Old Town Road, Black M - Mon Beau Frère, Jonas Brothers - Sucker','Nikos Aliagas');
+--2017
 
-----
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Lisandro Cuxi','Révélation francophone de l''année','Lisandro Cuxi, Boostee, Lenni-Kim, Lartiste, Léa Paci, Tibz','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Revelation francophone','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Revelation francophone','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2019,'Bilal Hassani','Revelation francophone','Bilal Hassani, Roméo Elvis, Lenni-Kim, Trois Cafés Gourmands, Maëlle, Boulevard des Airs','Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Rag''n''Bone Man','Révélation internationale de l''année','Rag''n''Bone Man, Jonas Blue, DJ Khaled, Shawn Mendes, Julia Michaels, Harry Styles','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','BigFlo et Oli','Groupe ou duo francophone de l''année','BigFlo et Oli, Amir et OneRepublic, Arcadian, Indochine, Kids United, Ofenbach', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Imagine Dragons','Groupe ou duo international de l''année','Imagine Dragons, Calvin Harris et Pharell Williams et Katy Perry et Big Sean, U2, Clean Bandit, J Balvin et Willy William, The Chainsmokers', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Soprano','Artiste masculin francophone de l''année','Soprano, Calogero, Claudio Capéo, Julien Doré, Matt Pokora, Vianney','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Ed Sheeran','Artiste masculin international de l''année','Ed Sheeran, Bruno Mars, Charlie Puth, Luis Fonsi, The Weeknd, Justin Bieber','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Louane','Artiste féminine francophone de l''année','Jain, Tal, Nolwenn Leroy, Vitaa, Louane','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Selena Gomez','Artiste féminine internationale de l''année','Miley Cyrus, P!nk, Selena Gomez, Shakira, Katy Perry, Taylor Swift','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Ed Sheeran - Shape Of You','Clip de l''année','Ed Sheeran - Shape Of You, The Chainsmokers et Coldplay - Something Just Like This, Julien Doré - Sublime et Silence, Calvin Harris et Pharell Williams et Katy Perry et Big Sean - Feels, Indochine - La vie est belle, Taylor Swift - Look What You Made Me Do','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Kungs','DJ de l''année','DJ Snake, David Guetta, Feder, Kungs, Martin Solveig, Petit Biscuit','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Luis Fonsi et Daddy Yankee et Justin Bieber - Despacito','Chanson internationale de l''année','Luis Fonsi et Daddy Yankee et Justin Bieber - Despacito, The Chainsmokers et Coldplay - Something Just Like This, Charlie Puth - Attention, Rag''n''Bone Man - Human, Ed Sheeran - Shape Of You, The Weeknd et Daft Punk - Starboy','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Amir - On dirait','Chanson francophone de l''année','Amir - On dirait, Vianney - Je m''en vais, Louane - On était beau, Lartiste et Awa Imani - Chocolat, Keen''V- Elle a, Soprano - Roule','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2017,'4/11','Ed Sheeran, The Weeknd, U2, Indochine','Awards d''honneur',Null,'Nikos Aliagas');
+
+
+-- 2016
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Amir','Révélation francophone de l''année','Jain, Jul, Ridsa, Slimane, Amir, Claudio Capéo','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Twenty One Pilots','Révélation internationale de l''année','Twenty One Pilots, Fifth Harmony, Lukas Graham, Mike Posner, The Chainsmokers, Zara Larsson','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Fréro Delavega','Groupe ou duo francophone de l''année','Fréro Delavega, Kids United, L.E.J, Les 3 Mousquetaires, Gims et Jul', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Coldplay','Groupe ou duo international de l''année','Coldplay, Calvin Harris et Rihanna, Sia et Sean Paul, Enrique Iglesias et Pitbull, Major Lazer', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Soprano','Artiste masculin francophone de l''année','Soprano, Black M, Christophe Maé, Julien Doré, Gims, Kendji Girac','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Justin Bieber','Artiste masculin international de l''année','Drake, Charlie Puth, Enrique Iglesias, The Weeknd, Justin Bieber, Justin Timberlake','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Tal','Artiste féminine francophone de l''année','Jenifer, Tal, Céline Dion, Imany, Louane, Zaho','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Sia','Artiste féminine internationale de l''année','Sia, Adele, Beyoncé, Rihanna, Lady Gaga, Shakira','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Christophe Maé - Il est où le bonheur ?','Clip de l''année','Christophe Maé - Il est où le bonheur ?, Adele - Hello, Coldplay - Up and Up, Jain - Come, Julien Doré - Le Lac, Rihanna et Drake - Work','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','David Guetta','DJ de l''année','DJ Snake, David Guetta, Feder, Kungs, Martin Garrix, Kygo','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Justin Bieber - Love Yourself','Chanson internationale de l''année','Justin Bieber - Love Yourself, Enrique Iglesias - Duele el corazon, Julian Perretta - Miracle, David Guetta et Zara Larsson - This One''s for You, Sia et Sean Paul - Cheap Thrills, Justin Timberlake - Can''t Stop the Feeling!','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Amir - J''ai cherché','Chanson francophone de l''année','Amir - J''ai cherché, Jain - Come, Christophe Maé - Il est où le bonheur ?, Gims et Niska - Sapés comme jamais, Soprano - Le diable ne s''habille plus en Prada','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2016,'12/11','Bruno Mars, Coldplay, Enrique Iglesias','Awards d''honneur',Null,'Nikos Aliagas');
+
+
+     
+-- 2015
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Louane','Révélation francophone de l''année','Louane, Lilian Renaud, Nekfeu, Marina Kaye, The Avener, Vianney','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Ellie Goulding','Révélation internationale de l''année','Ellie Goulding, OMI, The Weeknd, Wiz Khalifa, Kygo, 5 seconds of summer','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Fréro Delavega','Groupe ou duo francophone de l''année','Fréro Delavega, Cats on Trees, L.E.J, La Légende du roi Arthur, Brigite, Indochine ', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Maroon 5','Groupe ou duo international de l''année','Maroon 5, Major Lazer, Mark Ronson et Bruno Mars, Enrique Iglesias et Nicky Jam, Muse, Tokio Hotel', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Matt Pokora','Artiste masculin francophone de l''année','Matt Pokora, Soprano, Black M, Calogero, Gims, Kendji Girac','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Ed Sheeran','Artiste masculin international de l''année','Ed Sheeran, Mika, Enrique Iglesias, Chris Brown, Jason Derulo, Sam Smith','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Shy''m','Artiste féminine francophone de l''année','Shy''m, Indila, Christine and the Queens, Coeur de pirate, Zazie, Zaz','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Taylor Swift','Artiste féminine internationale de l''année','Sia, Ariana Grande, Madonna, Rihanna, Taylor Swift, Selena Gomez','Nikos Aliagas');
+  
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Taylor Swift - Bad Blood','Clip de l''année','Taylor Swift -  Bad Blood, David Guetta et Nicky Minaj et Bebe Rexha et Afrojack - Hey Mama, Major Lazer et MO et DJ Snake - Lean On, Maroon 5 - Sugar, Christine and the Queens - Christine, Skrillex et Diplo et Justin Bieber - Where Are U Now','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','David Guetta','DJ de l''année','DJ Snake, David Guetta, Avicii, Calvin Harris , Martin Solveig, Robin Schulz','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Wiz Khalifa et Charlie Puth - See You Again','Chanson internationale de l''année','Wiz Khalifa et Charlie Puth - See You Again, Major Lazer et MO et DJ Snake - Lean On, Mark Ronson et Bruno Mars - UpTown Funk,  OMI - Cheerleader, Jason Derulo - Want to Want Me, Ed Sheeran - Thinking Out Loud','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Kendji Girac - Conmigo','Chanson francophone de l''année','Kendji Girac - Conmigo, Marina Gaye - Homeless, Louane - Avenir, Christine and the Queens - Christine, Gims - Est-ce que tu m''aimes?','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Adele, Sting, Justin Bieber, Charles Aznavour','Awards d''honneur',Null,'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2015,'7/11','Shy''m','Disque de diamant',Null,'Nikos Aliagas');
 
 
 
-2006
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) 
-values (2006, ' Raphael','Artiste masculin francophone de l''année','Calogero, Gérald de Palmas, Marc Lavoine, Raphael, Yannick Noah ','Anthony Kavanagh ');
+-- 2014
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) 
-values (2006, 'Robbie Williams ','Artiste masculin international de l''année','Robbie Williams, Robbie Williams, 50 Cent, Sean Paul, Ricky Martin ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Kendji Girac','Révélation francophone de l''année','Kendji Girac, Black M, David Carreira, Fréro Delavega, Indila, Lilly Wood and the Prick et Robin Schulz','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) 
-values (2006, 'Jenifer ','Artiste féminine francophone de l''année','Jenifer, Céline Dion, Lââm, Mylène Farmer, Tina Arena ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Ariana Grande','Révélation internationale de l''année','Ariana Grande, Iggy Azalea, London Grammar, Sam Smith, Aloe Blacc, Milky Chance','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' Madonna','Artiste féminine internationale de l''année','Madonna, Shakira, Natalie Imbruglia, Gwen Stefani, Mariah Carey ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Daft Punk','Groupe ou duo francophone de l''année','Daft Punk, Kyo, Magic System, Shaka Ponk, Placebo, Indochine ', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' Gregory Lemarchal','Révélation francophone de l''année','Gregory Lemarchal, Emmanuel Moire, Amel Bent, M. Pokora, Gage ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','One Direction','Groupe ou duo international de l''année','Maroon 5, Coldplay, Imagine Dragons, OneRepublic, One Direction, Tokio Hotel', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' James Blunt','Révélation internationale de l''année','James Blunt, Daniel Powter, Akon, Lemar, The Pussycat Dolls ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Matt Pokora','Artiste masculin francophone de l''année','Matt Pokora, Keen''V, David Guetta, Stromae, Calogero, Julien Doré','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2006, 'Mylène Farmer - Avant que l'ombre... ','Album francophone de l''année',' Raphael - Caravane, Gérald de Palmas - Un homme sans racines, Calogero - Live 1.0, Kyo - 300 lésions, Mylène Farmer - Avant que l'ombre...','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Pharell Williams','Artiste masculin international de l''année','Ed Sheeran, Avicii, Pharell Williams, Pitbull, Jason Derulo, Lenny Kravitz','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' ','Révélation francophone de l''année',' ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Tal','Artiste féminine francophone de l''année','Shy''m, Tal, Vanessa Paradis, Zaz, Joyce Jonathan, Maude','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' The Black Eyed Peas - Monkey Business','Album international de l''année','The Black Eyed Peas - Monkey Business, Moby - Hotel,  Coldplay - X&Y, Robbie Williams - Intensive Care, Mariah Carey - The Emancipation of Mimi ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Sia','Artiste féminine internationale de l''année','Sia, Beyoncé, Shakira, Katy Perry, Taylor Swift, Nicky Minaj','Nikos Aliagas');
+  
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Black M - Mme Pavoshko','Clip de l''année','Black M - Mme Pavoshko, Nicky Minaj - Anaconda, David Guetta - Lovers on the Sun, Pharell Williams - Happy, Stromae - Ta fête, Katy Perry - Dark Horse','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' M. Pokora - Elle me contrôle','Chanson francophone de l''année','M. Pokora - Elle me contrôle, Emmanuel Moire - Mon Essentiel, Gérald de Palmas - Elle habite ici, Lââm - Petite Sœur, Raphael - Caravane ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Sia - Chandelier','Chanson internationale de l''année','Sia - Chandelier, Coldplay - A Sky Full of Stars, Iggy Azalea et Ariana Grande- Problem,  Pharell Williams - Happy, Micheal Jackson et Justin Timberlake - Love Never Felt So Good, Pitbull et Jenifer Lopez et Claudia Leite - We Are One (Ole Ola)','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' Shakira - La Tortura','Chanson internationale de l''année','Daniel Powter - Bad Day, Lemar - If There's Any Justice, Akon - Lonely, The Black Eyed Peas - Don't Lie, Shakira - La Tortura','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Kendji Girac - Color Gitano','Chanson francophone de l''année','Kendji Girac - Color Gitano, Indila - Derniere danse, Fréro Delavega - Sweet Darling, Julien Doré- Paris Seychelles, Black M - Sur ma route','Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, 'M. Pokora - Elle me contrôle ','Clip de l''année','M. Pokora - Elle me contrôle, Gorillaz - Feel Good Inc.,  Robbie Williams - Tripping, Sinsemilia - Tout le bonheur du monde, Shakira - La Tortura ','Anthony Kavanagh ');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2014,'13/11','Stromae, Lenny Kravitz','Awards d''honneur',Null,'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, ' The Black Eyed Peas','Groupe/duo/troupe international de l''année','The Black Eyed Peas, U2, Depeche Mode, Green Day, Coldplay ','Anthony Kavanagh ');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2006, 'Le Roi Soleil ','Groupe/duo/troupe francophone de l''année','Le Roi Soleil, Yannick Noah et Disiz,  Kyo, Tryo, Magic System ','Anthony Kavanagh ');
+---- 2013 
 
-2007
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Christophe Maé ','Révélation francophone de l''année','Christophe Maé, Faf La Rage, Najoua Belyzel, Olivia Ruiz, Shy'm ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Tal','Révélation francophone de l''année', 'C2C, Orelsan, Youssoupha, Matt Houston, Stéphan Rizon, Tal', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Nelly Furtado ','Révélation internationale de l''année','Nelly Furtado, Cassie, James Morrison, Lily Allen, Rihanna ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Carly Rae Jepsen', 'Révélation internationale de l''année', 'Birdy, Carly Rae Jepsen, Michel Teló, Psy, Gotye, Lana Del Rey', 'Nikos Aliagas' );
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'M. Pokora ','Artiste masculin francophone de l''année','M. Pokora, Raphael, Pascal Obispo, Faudel, Corneille ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Sexion d’Assaut', 'Groupe ou duo francophone de l''année', 'BB Brunes, Kenza Farah et Soprano, Sexion d’assaut, 1789 : Les Amants de la Bastille, Shaka Ponk, Superbus', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Justin Timberlake ','Artiste masculin international de l''année','Justin Timberlake, Juanes, P. Diddy, Robbie Williams, Sean Paul ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'One Direction', 'Groupe ou duo international de l''année', 'Coldplay, Carly Rae Jepsen et Owl City, Maroon 5, One Direction, Justin Bieber et Nicki Minaj, Muse', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Diam's ','Artiste féminine francophone de l''année','Diam's, Chimène Badi, Hélène Ségara, Nâdiya, Tina Arena ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Shy''m', 'Artiste féminine francophone de l''année', 'Jenifer, Amel Bent, Nolwenn Leroy, Shy''m, Chimène Badi, Sheryfa Luna', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Christina Aguilera ','Artiste féminine internationale de l''année','Christina Aguilera, Beyoncé, Madonna, P!nk, Shakira ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Matt Pokora','Artiste Masculin francophone de l''année', 'Corneille, David Guetta, Matt Pokora, Keen V', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Evanescence ','Groupe / duo / troupe internationale de l''année','Evanescence, The Black Eyed Peas, Simple Plan, The Killers, The Pussycat Dolls ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Rihanna', 'Artiste féminine internationale de l''année', 'Adele, Alicia Keys, Nicki Minaj, Rihanna, Jennifer Lopez, Pink', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Diam's - Dans ma bulle ','Album francophone de l''année','Diam's - Dans ma bulle, Olivia Ruiz - La Femme chocolat, Yannick Noah - Charango, Nâdiya - Nâdiya, Pascal Obispo - Les Fleurs du bien ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Bruno Mars', 'Artiste masculin international de l''année', 'Flo Rida, Bruno Mars, Pitbull, Will.i.am, Mika, Robbie Williams', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Bob Sinclar ','DJ de l''année','Bob Sinclar, David Guetta, David Vendetta, Martin Solveig, Laurent Wolf ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Psy – Gangnam Style', 'Chanson internationale de l''année', 'Carly Rae Jepsen - Call me maybe, PSY - Gangnam Style, Rihanna - Diamonds, Will.i.Am - This is love, Gotye et Kimbra - Somebody That I Used, Michel Teló - Ai se eu te pego', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Le Roi Soleil ','Groupe / duo / troupe francophone de l''année','Le Roi Soleil, Fight Aids, Indochine, Leslie /  Amine, Mylène Farmer /  Moby ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Sexion d’Assaut – Avant qu’elle parte', 'Chanson francophone de l''année', '1789 : Les Amants de la Bastille- Tomber dans ses yeux, Jenifer - Sur le fil, Keen''v - Les mots, Shy''m - Et alors !, Sexion d''Assaut - Avant qu''elle parte, Tal - Le Sens de la vie', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Christina Aguilera - Back to Basics ','Album international de l''année','Christina Aguilera - Back to Basics, Madonna - Confessions on a Dance Floor, Justin Timberlake - FutureSex/LoveSounds, Red Hot Chili Peppers - Stadium Arcadium, Evanescence - The Open Door ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Psy - Gangnam Style', 'Clip de l’année', 'Justin Bieber et Nicki Minaj - Beauty and a Beat, C2C - Down The Road, Rihanna - Where Have You Been,  Psy - Gangnam Style, Gotye et Kimbra - Somebody That I Used to Know, Shaka Ponk - My Name Is Stain', 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'M. Pokora - De retour ','Clip de l''année','M. Pokora - De retour, P!nk - Stupid Girls, Diam's - Jeune demoiselle, Bob Sinclar - Rock This Party, Evanescence - Call Me When You're Sober ',' Arthur');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'26/1', 'Psy, Johnny Hallyday, Patrick Bruel','Award d''honneur', NULL, 'Nikos Aliagas');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Rihanna - Unfaithful ','Chanson Internationale de l''année','Christina Aguilera - Ain't No Other Man, Gnarls Barkley - Crazy, Shakira / Wyclef Jean - Hips Don't Lie , Nelly Furtado - Maneater, Rihanna - Unfaithful',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2007, 'Diam's - La Boulette ','Chanson Francophone de l''année','Diam's - La Boulette, Faf La Rage - Pas le temps, Olivia Ruiz - J'traîne des pieds, Shy'm - Femme de couleur, Faudel - Mon pays ',' Arthur');
+-- 2013 15th edition
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Louis Delort', 'Révélation francophone de l''année', 'Brice Conrad, Maude, Axel Tony, Luc Arbogast, Louis Delort, John Mamann' ,'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'James Arthur', 'Révélation internationale de l''année', 'James Arthur, Alex Hepburn, Avicii, Macklemore et Ryan Lewis, Calvin Harris, Major Lazer', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Robin des Bois', 'Groupe ou duo francophone de l''année', 'Robin des Bois, 1789 : Les Amants de la Bastille: Les Amants de la Bastille, Indochine, Youssoupha et Ayna, Génération Goldman 2, Daft Punk', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'One Direction', 'Groupe ou duo international de l''année', 'Macklemore  et  Ryan Lewis, One Direction, Maroon 5,  Robin Thicke et Pharrell Williams, Muse, Major Lazer', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Tal', 'Artiste féminine francophone de l''année', 'Amel Bent, Tal, Joyce Jonathan, Zaho, Céline Dion, Zaz', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Stromae', 'Artiste masculin francophone de l''année', 'Emmanuel Moire, Keen''V, Maître Gims, Grégoire, Stromae, Christophe Maé', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Katy Perry', 'Artiste féminine internationale de l''année', 'P!nk, Rihanna, Miley Cyrus, Katy Perry, Britney Spears, Lady Gaga','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Bruno Mars', 'Artiste masculin international de l''année', 'Justin Timberlake, Will.i.am, Robin Thicke, Mika, Eminem, Bruno Mars', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Katy Perry - Roar ', 'Chanson internationale de l''année', 'Daft Punk et Pharrell Williams - Get Lucky, Bruno Mars - Treasure, Avicii et Aloe Blacc - Wake Me Up, Passenger - Let Her Go, Katy Perry - Roar, Robin Thicke et Pharrell Williams et T.I -  Blurred Lines ','Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Stromae - Formidable', 'Chanson francophone de l''année', 'Emmanuel Moire - Beau Malheur, Joyce Jonathan - Ça ira, Keen''V et Lorelei B - La Vie Du Bon Côté, Stromae - Formidable, Zaz - On ira, Maitre Gims - Bella', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'One Direction - Best Song Ever', 'Clip de l’année', 'Stromae - Papaoutai, Miley Cyrus - Wrecking Ball, One Direction - Best Song Ever, Stromae - Formidable , Lady Gaga - Applause, Robin Thicke et Pharrell Williams et T.I - Blurred Lines', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2013,'14/12', 'Christophe Maé', 'Award d''honneur', NULL, 'Nikos Aliagas');
+
+
+--2012
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Keen''v', 'Révélation francophone de l''année', 'Inna Modja, Merwan Rim, Mickaël Miro, Keen''v, Tal, Colonel Reyel', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Adele','Révélation internationale de l''année', 'Bruno Mars, Jessie J, Adele, LMFAO, Julian Perretta, Selah Sue', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Simple Plan et Marie-Mai', 'Groupe ou duo francophone de l''année', 'Elisa Tovati et Tom Dice, Magic System, DJ Abdel et Soprano, Corneille, 1789', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'LMFAO', 'Groupe ou duo international de l''année', 'Coldplay, David Guetta, Black Eyed Peas, LMFAO, Maroon 5 et Christina Aguilera, Pitbull et Ne-Yo', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Shy''m', 'Artiste féminine francophone de l''année', 'Elisa Tovati, Joyce Jonathan, Nolwenn Leroy, Shy''m, Vanessa Paradis, Zaz', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Matt Pokora', 'Artiste masculin francophone de l''année', 'Christophe Maé, Corneille, David Guetta, Matt Pokora, Ben l''Oncle Soul, Calogero', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Rihanna', 'Artiste féminine internationale de l''année', 'Beyoncé, Britney Spears, Katy Perry, Rihanna, Jennifer Lopez, Lady Gaga', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Mika', 'Artiste masculin international de l''année', 'Enrique Iglesias, Pitbull, Sean Paul, Mika, James Blunt, Justin Bieber', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Adele - Someone Like You', 'Chanson internationale de l''année', 'LMFAO - Party Rock Anthem, Bruno Mars - The Lazy Song, Rihanna et Calvin Harris - We Found Love, Adele - Someone Like You, Pitbull et Ne-Yo Nayer Afrojack - Give Me Everything, Jennifer Lopez et Pitbull - On the Floor', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Matt Pokora - A nos actes manqués', 'Chanson francophone de l''année', 'Nolwenn Leroy - Tri martolod, Mika - Elle me dit, Elisa Tovati et Tom Dice - Il nous faut, Mickaël Miro - L''horloge tourne, Matt Pokora - A nos actes manqués', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'LMFAO - Party Rock Anthem', 'Clip de l’année', 'Katy Perry - Last Friday Night (T.G.I.F.), Lady Gaga - Born This Way, Mika - Elle me dit, LMFAO - Party Rock Anthem, 1789 : Les Amants de la Bastille - Ça ira mon amour, Martin Solveig - Hello', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2012,'28/1', 'Shakira, Mylène Farmer, Nolwenn Leroy, Justin Bieber', 'Award d''honneur', NULL, 'Nikos Aliagas');
+
+
+--2011
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Joyce Jonathan', 'Révélation francophone de l''année', 'Ben l''Oncle Soul, Camélia Jordana, Pony Pony Run Run, Joyce Jonathan, Stromae, Zaz', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Justin Bieber', 'Révélation internationale de l''année', 'Taio Cruz, Inna, KeSha, Justin Bieber, Plan B, Gossip', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Justin Nozuka et Zaho', 'Groupe ou duo francophone de l''année', 'Coeur de Pirate et Julien Doré,  K''naan et Féfé, Superbus, Justin Nozuka et Zaho, BB Brunes, Collectif Métissé', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'The Black Eyed Peas', 'Groupe ou duo international de l''année', 'Eminem et Rihanna, Lady Gaga et Beyoncé, Muse, The Black Eyed Peas, Maroon 5, Justin Bieber et Usher', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Jenifer', 'Artiste féminine francophone de l''année', 'Cœur de Pirate, Mylène Farmer, Shy''m, Jenifer, Amel Bent, Zazie', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Matt Pokora', 'Artiste masculin francophone de l''année', 'Grégoire, David Guetta, Christophe Maé, Matt Pokora, Yannick Noah, Gaëtan Roussel', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Shakira', 'Artiste féminine internationale de l''année', 'Lady Gaga, Katy Perry, Rihanna, Shakira, Kylie Minogue, P!nk', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Usher', 'Artiste masculin international de l''année', 'James Blunt, Eminem, Enrique Iglesias, Usher, Phil Collins, Seal', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Shakira et Freshlyground - Waka Waka', 'Chanson internationale de l''année', 'Lady Gaga - Bad Romance, Katy Perry et Snoop Dogg - California Gurls, Eminem et Rihanna - Love the Way You Lie, Shakira et Freshlyground - Waka Waka, Taio Cruz - Break Your Heart, Train - Hey, Soul Sister', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Matt Pokora - Juste une photo de toi', 'Chanson francophone de l''année', 'Zaz - Je Veux, Grégoire - Danse, Shy''m - Je Sais, Stromae - Alors On Danse, Joyce Jonathan - Pas besoin de toi, Matt Pokora - Juste une photo de toi', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Lady Gaga et Beyoncé - Telephone', 'Clip de l’année', 'Christophe Maé - Je Me Lache, Eminem et Rihanna - Love the Way You Lie, Katy Perry et Snoop Dogg - California Gurls, Lady Gaga et Beyoncé - Telephone, Ben l''Oncle Soul - Soulman, Martin Solveig et Dragonette - Hello', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'David Guetta', 'Award d''honneur', NULL, 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'The Black Eyed Peas', 'Concert de l’année', 'Christophe Maé, Yannick Noah, Lady Gaga, The Black Eyed Peas, Indochine, Muse', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Flo Rida et David Guetta - Club Can''t Handle Me', 'Hit de l''année', 'K''naan et Féfé - Wavin''Flag, Remady - Give me a sign, Usher et Pitbull - DJ Got Us Fallin''in Love, Flo Rida et David Guetta - Club Can''t Handle Me, Plan B - She Said, Yolanda Be Cool - We No Speak Americano', 'Nikos Aliagas');
+
+
+--2010
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Florent Mothe', 'Révélation francophone de l''année', 'Cœur de pirate, Jena Lee, Sliimy, Tom Frager, Florent Mothe', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Lady Gaga', 'Révélation internationale de l''année', 'Agnes, Charlie Winston, Justin Nozuka, Milow, Lady Gaga', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Mozart l''Opéra Rock', 'Groupe ou duo francophone de l''année', 'Bisso Na Bisso, Raï''n''B Fever et Magic System et Khaled, Superbus, Tryo, Mozart, l''opéra rock', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Tokio Hotel', 'Groupe ou duo international de l''année', 'The Black Eyed Peas, Green Day, Jay-Z et Alicia Keys, U2, Tokio Hotel', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Sofia Essaidi', 'Artiste féminine francophone de l''année', 'Amel Bent, Diam''s, Sheryfa Luna, Zaho, Sofia Essaidi', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Christophe Willem', 'Artiste masculin francophone de l''année', 'David Guetta, Emmanuel Moire, Gérald de Palmas, Grégoire, Christophe Willem', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Rihanna', 'Artiste féminine internationale de l''année', 'Alicia Keys, Lily Allen, Mariah Carey, Shakira, Rihanna', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Robbie Williams', 'Artiste masculin international de l''année', 'James Morrison, Jason Mraz, Michael Bublé, Mika, Robbie Williams', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'The Black Eyed Peas - I Gotta Feeling', 'Chanson internationale de l''année', 'Lily Allen - Fuck You, Pitbull - I Know You Want me, Lady Gaga - Poker Face, David Guetta - When Love Takes Ove, The Black Eyed Peas - I Gotta Feeling', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Mozart l''Opéra Rock - L''assasymphonie', 'Chanson francophone de l''année', 'Coeur de Pirate - Comme des enfants, Gérald de Palmas - Au bord de l''eau, Helmut Fritz - Ca m''énerve, Mozart Opéra Rock - L''assasymphonie', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Robbie Williams, Beyoncé', 'Award d''honneur', NULL, 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Christophe Willem - Caféine', 'Album français de l''année', 'Emmanuel Moire - L''équilibre, Diam''s - S.O.S, Grégoire - Toi+Moi, Mozart - L''opéra-rock, Christophe Willem - Caféine', 'Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'David Guetta - One Love', 'Album international de l''année', 'Charlie Winston - Hobo, Beyoncé - I Am... Sasha Fierce, The Black Eyed Peas - The E.N.D, Lady Gaga - The Fame, David Guetta - One Love', 'Nikos Aliagas');
+
+
+-- 2009 
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Jenifer ','Artiste féminine francophone de l''année','Jenifer, Mylène Farmer, Nâdiya, Shy''m, Zazie ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Christophe Maé ','Artiste masculin francophone de l''année','Christophe Maé, Renan Luce, David Guetta, Laurent Wolf, Martin Solveig ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Britney Spears ','Artiste féminine internationale de l''année','Britney Spears, Beyoncé, Christina Aguilera, P!nk, Rihanna ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Enrique Iglesias ','Artiste masculin international de l''année','Enrique Iglesias, Akon, Chris Brown, James Blunt, Lenny Kravitz ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Zaho ','Révélation francophone de l''année','Zaho, Grégoire,Marc Antoine, Sheryfa Luna, William Baldé',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Jonas Brothers ','Révélation internationale de l''année','Jonas Brothers, Amy Macdonald, Duffy, Katy Perry, Leona Lewis ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Mylène Farmer - Point de Suture ','Album français de l''année','Mylène Farmer - Point de Suture, BB Brunes - Blonde comme moi, Christophe Maé - Comme à la maison, Julien Doré - Ersatz, Renan Luce - Repenti ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Katy Perry - One of the Boys ','Album international de l''année','Amy Macdonald - This Is the Life, Coldplay - Viva la Vida or Death and All His Friends, Duffy - Rockferry, Katy Perry - One of the Boys,P!nk - Funhouse ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Cléopâtre ','Groupe ou duo francophone de l''année','Cléopâtre, Enrique Iglesias et , Stanislas et CalogeroNâdiya, Magic System, Sheryfa Luna et Mathieu Edward ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'The Pussycat Dolls ','Groupe ou duo international de l''année','The Pussycat Dolls, Coldplay, Estelle et Kanye West, Fall Out Boy, Madcon ',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Christophe Maé - Belle demoiselle ','Chanson Francophone de l''année','Christophe Maé - Belle demoiselle, Stanislas et Calogero - La débâcle des sentiments, Julien Doré - Les Limites, Enrique Iglesias et Nâdiya - Tired of Being Sorry, William Baldé - Rayon de Soleil',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Rihanna - Disturbia ','Chanson internationale de l''année','Rihanna - Disturbia, Coldplay - Viva la Vida, Estelle et Kanye West - American Boy, Katy Perry - I Kissed a Girl , Madcon - Beggin',' Nikos Aliagas');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2009,'17/1', 'Britney Spears - Womanizer ','Clip de l''année','Fall Out Boy - I Don''t Care, Britney Spears - Womanizer, Martin Solveig - C''est la vie, Stanislas et Calogero - La débâcle des sentiments, Zaho - C''est chelou ',' Nikos Aliagas');
 
 
 --2008
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Christophe Willem ','Révélation française de l''année',' Christophe Willem, Justice,Melissa M, Vitaa, Yael Naim',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Mika ','Révélation internationale de l''année','Mika, Amy Winehouse, Fall Out Boy, Plain White T's, Sean Kingston ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Christophe Willem ','Révélation francophone de l''année',' Christophe Willem, Justice,Melissa M, Vitaa, Yael Naim',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Jenifer ','Artiste féminine française de l''année','Jenifer, Amel Bent, Céline Dion, Shy'm, Zazie ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Mika ','Révélation internationale de l''année','Mika, Amy Winehouse, Fall Out Boy, Plain White T''s, Sean Kingston ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Avril Lavigne ','Artiste féminine internationale de l''année','Avril Lavigne, Alicia Keys, Fergie, Nelly Furtado, Rihanna ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Jenifer ','Artiste féminine francophone de l''année','Jenifer, Amel Bent, Céline Dion, Shy''m, Zazie ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Christophe Maé ','Artiste masculin français de l''année','Christophe Maé, Calogero, David Guetta, Emmanuel Moire, MC Solaar ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Avril Lavigne ','Artiste féminine internationale de l''année','Avril Lavigne, Alicia Keys, Fergie, Nelly Furtado, Rihanna ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Justin Timberlake ','Artiste masculin international de l''année','Justin Timberlake, Akon, James Blunt, Juanes, Timbaland ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Christophe Maé ','Artiste masculin francophone de l''année','Christophe Maé, Calogero, David Guetta, Emmanuel Moire, MC Solaar ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Superbus ','Groupe/duo français de l''année',' Superbus, Diam's et  Vitaa, Fatal Bazooka, IAM, Magic System',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Justin Timberlake ','Artiste masculin international de l''année','Justin Timberlake, Akon, James Blunt, Juanes, Timbaland ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Tokio Hotel ','Groupe/duo international de l''année','Tokio Hotel, 50 Cent et Justin Timberlake, Linkin Park, Maroon 5, P. Diddy et Keyshia Cole ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Superbus ','Groupe ou duo francophone de l''année',' Superbus, Diam''s et  Vitaa, Fatal Bazooka, IAM, Magic System',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Rihanna - Don't Stop the Music ','Chanson internationale de l''année','Rihanna - Don't Stop the Music, James Blunt - 1973, MIKA - Relax, Take It Easy, Sean Kingston - Beautiful Girls,Timbaland featuring Keri Hilson - The Way I Are  ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Tokio Hotel ','Groupe ou duo international de l''année','Tokio Hotel, 50 Cent et Justin Timberlake, Linkin Park, Maroon 5, P. Diddy et Keyshia Cole ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Christophe Willem - Inventaire ','Album français de l''année','Christophe Willem - Inventaire, Bob Sinclar - Soundz of Freedom, Christophe Maé - Mon Paradis, David Guetta - Pop Life, Vanessa Paradis - Divinidylle ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Rihanna - Don''t Stop the Music ','Chanson internationale de l''année','Rihanna - Don''t Stop the Music, James Blunt - 1973, MIKA - Relax, Take It Easy, Sean Kingston - Beautiful Girls,Timbaland featuring Keri Hilson - The Way I Are  ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Britney Spears - Blackout ','Album international de l''année','Britney Spears - Blackout, Amy Winehouse - Back to Black, James Blunt - All the Lost Souls, MIKA - Life in Cartoon Motion, Rihanna - Good Girl Gone Bad ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Christophe Willem - Inventaire ','Album français de l''année','Christophe Willem - Inventaire, Bob Sinclar - Soundz of Freedom, Christophe Maé - Mon Paradis, David Guetta - Pop Life, Vanessa Paradis - Divinidylle ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Fatal Bazooka featuring Yelle - Parle à ma main ','Clip de l''année','Fatal Bazooka featuring Yelle - Parle à ma main, 50 Cent featuring Justin Timberlake & Timbaland - Ayo Technology, Calogero - Pomme C, Justice - D.A.N.C.E, MIKA - Relax, Take It Easy ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Britney Spears - Blackout ','Album international de l''année','Britney Spears - Blackout, Amy Winehouse - Back to Black, James Blunt - All the Lost Souls, MIKA - Life in Cartoon Motion, Rihanna - Good Girl Gone Bad ',' Benjamin Castaldi');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2008, 'Christophe Maé - On s'attache ','Chanson française de l''année','Christophe Maé - On s'attache, Christophe Willem - Double je, Jenifer - Tourner ma page, Superbus - Travel the World,Vanessa Paradis - Dès que j'te vois ',' Benjamin Castaldi');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Fatal Bazooka et Yelle - Parle à ma main ','Clip de l''année','Fatal Bazooka et Yelle - Parle à ma main, 50 Cent et Justin Timberlake et Timbaland - Ayo Technology, Calogero - Pomme C, Justice - D.A.N.C.E, MIKA - Relax (Take It Easy) ',' Benjamin Castaldi');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2008,'26/1', 'Christophe Maé - On s''attache ','Chanson francophone de l''année','Christophe Maé - On s''attache, Christophe Willem - Double je, Jenifer - Tourner ma page, Superbus - Travel the World, Vanessa Paradis - Dès que j''te vois ',' Benjamin Castaldi');
 
 
+--- 2007
 
---2009
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Jenifer ','Artiste féminine française de l''année','Jenifer, Mylène Farmer, Nâdiya, Shy'm, Zazie ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Christophe Maé ','Révélation francophone de l''année','Christophe Maé, Faf La Rage, Najoua Belyzel, Olivia Ruiz, Shy''m ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Christophe Maé ','Artiste masculin français de l''année','Christophe Maé, Renan Luce, David Guetta, Laurent Wolf, Martin Solveig ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Nelly Furtado ','Révélation internationale de l''année','Nelly Furtado, Cassie, James Morrison, Lily Allen, Rihanna ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Britney Spears ','Artiste féminine internationale de l''année','Britney Spears, Beyoncé, Christina Aguilera, P!nk, Rihanna ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Matt Pokora ','Artiste masculin francophone de l''année','Matt Pokora, Raphael, Pascal Obispo, Faudel, Corneille ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Enrique Iglesias ','Artiste masculin international de l''année','Enrique Iglesias, Akon, Chris Brown, James Blunt, Lenny Kravitz ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Justin Timberlake ','Artiste masculin international de l''année','Justin Timberlake, Juanes, P. Diddy, Robbie Williams, Sean Paul ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Zaho ','Révélation française de l''année','Zaho, Grégoire,Marc Antoine, Sheryfa Luna, William Baldé',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Diam''s ','Artiste féminine francophone de l''année','Diam''s, Chimène Badi, Hélène Ségara, Nâdiya, Tina Arena ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Jonas Brothers ','Révélation internationale de l''année','Jonas Brothers, Amy Macdonald, Duffy, Katy Perry, Leona Lewis ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Christina Aguilera ','Artiste féminine internationale de l''année','Christina Aguilera, Beyoncé, Madonna, P!nk, Shakira ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Mylène Farmer - Point de Suture ','Album francophone de l''année','Mylène Farmer - Point de Suture, BB Brunes - Blonde comme moi, Christophe Maé - Comme à la maison, Julien Doré - Ersatz, Renan Luce - Repenti ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Evanescence ','Groupe ou duo international de l''année','Evanescence, The Black Eyed Peas, Simple Plan, The Killers, The Pussycat Dolls ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Katy Perry - One of the Boys ','Album international de l''année','Amy Macdonald - This Is the Life, Coldplay - Viva la Vida or Death and All His Friends, Duffy - Rockferry, Katy Perry - One of the Boys,P!nk - Funhouse ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Diam''s - Dans ma bulle ','Album français de l''année','Diam''s - Dans ma bulle, Olivia Ruiz - La Femme chocolat, Yannick Noah - Charango, Nâdiya - Nâdiya, Pascal Obispo - Les Fleurs du bien ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Cléopâtre ','Groupe/duo français de l''année','Cléopâtre, Enrique Iglesias et , Stanislas et CalogeroNâdiya, Magic System, Sheryfa Luna et Mathieu Edward ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Bob Sinclar ','DJ de l''année','Bob Sinclar, David Guetta, David Vendetta, Martin Solveig, Laurent Wolf ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'The Pussycat Dolls ','Groupe/duo international de l''année','The Pussycat Dolls, Coldplay, Estelle et Kanye West, Fall Out Boy, Madcon ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Le Roi Soleil ','Groupe ou duo francophone de l''année','Le Roi Soleil, Fight Aids, Indochine, Leslie et Amine, Mylène Farmer et  Moby ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, ' ','Chanson Francophone de l''année',' ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Christina Aguilera - Back to Basics ','Album international de l''année','Christina Aguilera - Back to Basics, Madonna - Confessions on a Dance Floor, Justin Timberlake - FutureSex/LoveSounds, Red Hot Chili Peppers - Stadium Arcadium, Evanescence - The Open Door ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Christophe Maé - Belle demoiselle ','Chanson Francophone de l''année','Christophe Maé - Belle demoiselle, Stanislas et Calogero - La débâcle des sentiments, Julien Doré - Les Limites, Enrique Iglesias et Nâdiya - Tired of Being Sorry, William Baldé - Rayon de Soleil',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Matt Pokora - De retour ','Clip de l''année','Matt Pokora - De retour, P!nk - Stupid Girls, Diam''s - Jeune demoiselle, Bob Sinclar - Rock This Party, Evanescence - Call Me When You''re Sober ',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Rihanna - Disturbia ','Chanson internationale de l''année','Rihanna - Disturbia, Coldplay - Viva la Vida, Estelle et Kanye West - American Boy, Katy Perry - I Kissed a Girl , Madcon - Beggin',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Rihanna - Unfaithful ','Chanson Internationale de l''année','Christina Aguilera - Ain''t No Other Man, Gnarls Barkley - Crazy, Shakira  et  Wyclef Jean - Hips Don''t Lie , Nelly Furtado - Maneater, Rihanna - Unfaithful',' Arthur');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur)
- values (2009, 'Britney Spears - Womanizer ','Clip de l''année','Fall Out Boy - I Don't Care, Britney Spears - Womanizer, Martin Solveig - C'est la vie, Stanislas et Calogero - La débâcle des sentiments, Zaho - C'est chelou ',' Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2007,'20/1', 'Diam''s - La Boulette ','Chanson Francophone de l''année','Diam''s - La Boulette, Faf La Rage - Pas le temps, Olivia Ruiz - J''traîne des pieds, Shy''m - Femme de couleur, Faudel - Mon pays ',' Arthur');
 
 
----- 2013 - 2010 -----
+-- 2006
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Tal','Révélation francophone de l''année', 'C2C, Orelsan, Youssoupha, Matt Houston, Stéphan Rizon, Tal', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Carly Rae Jepsen', 'Révélation internationale de l''année', 'Birdy, Carly Rae Jepsen, Michel Teló, Psy, Gotye, Lana Del Rey', 'Nikos Aliagas' );
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Sexion d’Assaut', 'Groupe ou duo francophone de l''année', 'BB Brunes, Kenza Farah et Soprano, Sexion d’assaut, 1789, Shaka Ponk, Superbus', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'One Direction', 'Groupe ou duo international de l''année', 'Coldplay, Carly Rae Jepsen et Owl City, Maroon 5, One Direction, Justin Bieber et Nicki Minaj, Muse', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Shy''m', 'Artiste féminine francophone de l''année', 'Jenifer, Amel Bent, Nolwenn Leroy, Shy''m, Chimène Badi, Sheryfa Luna', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Matt Pokora','Artiste Masculin francophone de l''année', 'Corneille, David Guetta, Matt Pokora, Keen V', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Rihanna', 'Artiste féminine internationale de l''année', 'Adele, Alicia Keys, Nicki Minaj, Rihanna, Jennifer Lopez, Pink', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Bruno Mars', 'Artiste masculin international de l''année', 'Flo Rida, Bruno Mars, Pitbull, Will.i.am, Mika, Robbie Williams', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Psy – Gangnam Style', 'Chanson internationale de l''année', 'Carly Rae Jepsen - Call me maybe, PSY - Gangnam Style, Rihanna - Diamonds, Will.i.Am - This is love, Gotye et Kimbra - Somebody That I Used, Michel Teló - Ai se eu te pego', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Sexion d’Assaut – Avant qu’elle parte', 'Chanson francophone de l''année', '1789 - Tomber dans ses yeux, Jenifer - Sur le fil, Keen''v - Les mots, Shy''m - Et alors !, Sexion d''Assaut - Avant qu''elle parte, Tal - Le Sens de la vie', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Psy – Gangnam Style', 'Clip de l’année', 'Justin Bieber et Nicki Minaj - Beauty and a Beat, C2C - Down The Road, Rihanna - Where Have You Been,  Psy - Gangnam Style, Gotye et Kimbra - Somebody That I Used to Know, Shaka Ponk - My Name Is Stain', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Psy, Johnny Hallyday, Patrick Bruel','Award d''honneur', NULL, 'Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', ' Raphael','Artiste masculin francophone de l''année','Calogero, Gérald de Palmas, Marc Lavoine, Raphael, Yannick Noah ','Anthony Kavanagh ');
 
-insert into  representants ();
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', 'Robbie Williams ','Artiste masculin international de l''année','Robbie Williams, Robbie Williams, 50 Cent, Sean Paul, Ricky Martin ','Anthony Kavanagh ');
 
--- 2013 15th edition
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Louis Delort', 'Révélation francophone de l''année', 'Brice Conrad, Maude, Axel Tony, Luc Arbogast, Louis Delort, John Mamann' ,'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'James Arthur', 'Révélation internationale de l''année', 'James Arthur, Alex Hepburn, Avicii, Macklemore et Ryan Lewis, Calvin Harris, Major Lazer', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Robin des Bois', 'Groupe ou duo francophone de l''année', 'Robin des Bois, 1789 : Les Amants de la Bastille, Indochine, Youssoupha et Ayna, Génération Goldman 2, Daft Punk', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'One Direction', 'Groupe ou duo international de l''année', 'Macklemore & Ryan Lewis, One Direction, Maroon 5,  Robin Thicke et Pharrell Williams, Muse, Major Lazer', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Tal', 'Artiste féminine francophone de l''année', 'Amel Bent, Tal, Joyce Jonathan, Zaho, Céline Dion, Zaz', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Stromae', 'Artiste masculin francophone de l''année', 'Emmanuel Moire, Keen''V, Maître Gims, Grégoire, Stromae, Christophe Maé', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Katy Perry', 'Artiste féminine internationale de l''année', 'P!nk, Rihanna, Miley Cyrus, Katy Perry, Britney Spears, Lady Gaga','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Bruno Mars', 'Artiste masculin international de l''année', 'Justin Timberlake, Will.i.am, Robin Thicke, Mika, Eminem, Bruno Mars', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Roar — Katy Perry', 'Chanson internationale de l''année', 'Get Lucky — Daft Punk et Pharrell Williams, Treasure — Bruno Mars, Wake Me Up — Avicii et Aloe Blacc, Let Her Go - Passenger, Roar — Katy Perry, Blurred Lines - Robin Thicke et Pharrell Williams et T.I ','Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Stromae — Formidable', 'Chanson francophone de l''année', 'Emmanuel Moire — Beau Malheur, Joyce Jonathan — Ça ira, Keen''V et Lorelei B — La Vie Du Bon Côté, Stromae — Formidable, Zaz — On ira, Maitre Gims — Bella', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Best Song Ever — One Direction', 'Clip de l’année', 'Papaoutai — Stromae, Wrecking Ball — Miley Cyrus, Best Song Ever — One Direction, Formidable — Stromae, Applause - Lady Gaga, Blurred Lines - Robin Thicke et Pharrell Williams et T.I', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2013, 'Christophe Maé', 'Award d''honneur', NULL, 'Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', 'Jenifer ','Artiste féminine francophone de l''année','Jenifer, Céline Dion, Lââm, Mylène Farmer, Tina Arena ','Anthony Kavanagh ');
 
-insert into  representants ();
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', ' Madonna','Artiste féminine internationale de l''année','Madonna, Shakira, Natalie Imbruglia, Gwen Stefani, Mariah Carey ','Anthony Kavanagh ');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Keen''v', 'Révélation francophone de l''année', 'Inna Modja, Merwan Rim, Mickaël Miro, Keen''v, Tal, Colonel Reyel', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Adele','Révélation internationale de l''année', 'Bruno Mars, Jessie J, Adele, LMFAO, Julian Perretta, Selah Sue', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Simple Plan et Marie-Mai', 'Groupe ou duo francophone de l''année', 'Elisa Tovati et Tom Dice, Magic System, DJ Abdel et Soprano, Corneille, 1789', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'LMFAO', 'Groupe ou duo international de l''année', 'Coldplay, David Guetta, Black Eyed Peas, LMFAO, Maroon 5 et Christina Aguilera, Pitbull et Ne-Yo', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Shy''m', 'Artiste féminine francophone de l''année', 'Elisa Tovati, Joyce Jonathan, Nolwenn Leroy, Shy''m, Vanessa Paradis, Zaz', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Matt Pokora', 'Artiste masculin francophone de l''année', 'Christophe Maé, Corneille, David Guetta, Matt Pokora, Ben l''Oncle Soul, Calogero', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Rihanna', 'Artiste féminine internationale de l''année', 'Beyoncé, Britney Spears, Katy Perry, Rihanna, Jennifer Lopez, Lady Gaga', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Mika', 'Artiste masculin international de l''année', 'Enrique Iglesias, Pitbull, Sean Paul, Mika, James Blunt, Justin Bieber', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Adele - Someone Like You', 'Chanson internationale de l''année', 'LMFAO - Party Rock Anthem, Bruno Mars - The Lazy Song, Rihanna et Calvin Harris - We Found Love, Adele - Someone Like You, Pitbull et Ne-Yo Nayer Afrojack - Give Me Everything, Jennifer Lopez et Pitbull - On the Floor', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Matt Pokora - A nos actes manqués', 'Chanson francophone de l''année', 'Nolwenn Leroy - Tri martolod, Mika - Elle me dit, Elisa Tovati et Tom Dice - Il nous faut, Mickaël Miro - L''horloge tourne, Matt Pokora - A nos actes manqués', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'LMFAO - Party Rock Anthem', 'Clip de l’année', 'Katy Perry - Last Friday Night (T.G.I.F.), Lady Gaga - Born This Way, Mika - Elle me dit,LMFAO - Party Rock Anthem, 1789 - Ça ira mon amour, Martin Solveig - Hello', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2012, 'Shakira, Mylène Farmer, Nolwenn Leroy, Justin Bieber', 'Award d''honneur', NULL, 'Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', ' Gregory Lemarchal','Révélation francophone de l''année','Gregory Lemarchal, Emmanuel Moire, Amel Bent, M. Pokora, Gage ','Anthony Kavanagh ');
 
-insert into  representants ();
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', ' James Blunt','Révélation internationale de l''année','James Blunt, Daniel Powter, Akon, Lemar, The Pussycat Dolls ','Anthony Kavanagh ');
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Joyce Jonathan', 'Révélation francophone de l''année', 'Ben l''Oncle Soul, Camélia Jordana, Pony Pony Run Run, Joyce Jonathan, Stromae, Zaz', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Justin Bieber', 'Révélation internationale de l''année', 'Taio Cruz, Inna, Ke$ha, Justin Bieber, Plan B, Gossip', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Justin Nozuka et Zaho', 'Groupe ou duo francophone de l''année', 'Cœur de Pirate et Julien Doré,  K''naan et Féfé, Superbus, Justin Nozuka et Zaho, BB Brunes, Collectif Métissé', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'The Black Eyed Peas', 'Groupe ou duo international de l''année', 'Eminem et Rihanna, Lady Gaga et Beyoncé, Muse, The Black Eyed Peas, Maroon 5, Justin Bieber et Usher', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Jenifer', 'Artiste féminine francophone de l''année', 'Cœur de Pirate, Mylène Farmer, Shy''m, Jenifer, Amel Bent, Zazie', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Matt Pokora', 'Artiste masculin francophone de l''année', 'Grégoire, David Guetta, Christophe Maé, Matt Pokora, Yannick Noah, Gaëtan Roussel', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Shakira', 'Artiste féminine internationale de l''année', 'Lady Gaga, Katy Perry, Rihanna, Shakira, Kylie Minogue, P!nk', 'Nikos Aliagas');, 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Usher', 'Artiste masculin international de l''année', 'James Blunt, Eminem, Enrique Iglesias, Usher, Phil Collins, Seal', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Shakira feat. Freshlyground - Waka Waka', 'Chanson internationale de l''année', 'Lady Gaga - Bad Romance, Katy Perry et Snoop Dogg - California Gurls, Eminem et Rihanna - Love the Way You Lie, Shakira et Freshlyground - Waka Waka, Taio Cruz - Break Your Heart, Train - Hey, Soul Sister', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Matt Pokora - Juste une photo de toi', 'Chanson francophone de l''année', 'Zaz - Je Veux, Grégoire - Danse, Shy''m - Je Sais, Stromae - Alors On Danse, Joyce Jonathan - Pas besoin de toi, Matt Pokora - Juste une photo de toi', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Lady Gaga feat Beyoncé - Telephone', 'Clip de l’année', 'Christophe Maé - Je Me Lâche, Eminem et Rihanna - Love the Way You Lie, Katy Perry et Snoop Dogg - California Gurls, Lady Gaga et Beyoncé - Telephone, Ben l''Oncle Soul - Soulman, Martin Solveig et Dragonette - Hello', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'David Guetta', 'Award d''honneur', NULL, 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'The Black Eyed Peas', 'Concert de l’année', 'Christophe Maé, Yannick Noah, Lady Gaga, The Black Eyed Peas, Indochine, Muse', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2011, 'Flo Rida et David Guetta - Club Can''t Handle Me', 'Hit de l''année', 'K''naan et Féfé - Wavin''Flag, Remady - Give me a sign, Usher et Pitbull - DJ Got Us Fallin''in Love, Flo Rida et David Guetta - Club Can''t Handle Me, Plan B - She Said, Yolanda Be Cool - We No Speak Americano', 'Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', 'Mylène Farmer - Avant que l''ombre... ','Album français de l''année',' Raphael - Caravane, Gérald de Palmas - Un homme sans racines, Calogero - Live 1.0, Kyo - 300 lésions, Mylène Farmer - Avant que l''ombre...','Anthony Kavanagh ');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', 'The Black Eyed Peas - Monkey Business','Album international de l''année','The Black Eyed Peas - Monkey Business, Moby - Hotel,  Coldplay - X and Y, Robbie Williams - Intensive Care, Mariah Carey - The Emancipation of Mimi ','Anthony Kavanagh ');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', ' Matt Pokora - Elle me contrôle','Chanson francophone de l''année','Matt Pokora - Elle me contrôle, Emmanuel Moire - Mon Essentiel, Gérald de Palmas - Elle habite ici, Lââm - Petite Sœur, Raphael - Caravane ','Anthony Kavanagh ');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', ' Shakira - La Tortura','Chanson internationale de l''année','Daniel Powter - Bad Day, Lemar - If There''s Any Justice, Akon - Lonely, The Black Eyed Peas - Don''t Lie, Shakira - La Tortura','Anthony Kavanagh ');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', 'Matt Pokora - Elle me contrôle ','Clip de l''année','Matt Pokora - Elle me contrôle, Gorillaz - Feel Good Inc.,  Robbie Williams - Tripping, Sinsemilia - Tout le bonheur du monde, Shakira - La Tortura ','Anthony Kavanagh ');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', ' The Black Eyed Peas','Groupe ou duo international de l''année','The Black Eyed Peas, U2, Depeche Mode, Green Day, Coldplay ','Anthony Kavanagh ');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2006,'23/1', 'Le Roi Soleil ','Groupe ou duo francophone de l''année','Le Roi Soleil, Yannick Noah et Disiz,  Kyo, Tryo, Magic System ','Anthony Kavanagh ');
 
 
+-- 2005
 
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Florent Mothe', 'Révélation francophone de l''année', 'Cœur de pirate, Jena Lee, Sliimy, Tom Frager, Florent Mothe', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Lady Gaga', 'Révélation internationale de l''année', 'Agnes, Charlie Winston, Justin Nozuka, Milow, Lady Gaga', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Mozart l''Opéra Rock', 'Groupe ou duo francophone de l''année', 'Bisso Na Bisso, Raï''n''B Fever et Magic System et Khaled, Superbus, Tryo, Mozart, l''opéra rock', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Tokio Hotel', 'Groupe ou duo international de l''année', 'The Black Eyed Peas, Green Day, Jay-Z et Alicia Keys, U2, Tokio Hotel', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Sofia Essaidi', 'Artiste féminine francophone de l''année', 'Amel Bent, Diam''s, Sheryfa Luna, Zaho, Sofia Essaidi', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Christophe Willem', 'Artiste masculin francophone de l''année', 'David Guetta, Emmanuel Moire, Gérald de Palmas, Grégoire, Christophe Willem', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Rihanna', 'Artiste féminine internationale de l''année', 'Alicia Keys, Lily Allen, Mariah Carey, Shakira, Rihanna', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Robbie Williams', 'Artiste masculin international de l''année', 'James Morrison, Jason Mraz, Michael Bublé, Mika, Robbie Williams', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'The Black Eyed Peas - I Gotta Feeling', 'Chanson internationale de l''année', 'Lily Allen - Fuck You, Pitbull - I Know You Want me, Lady Gaga - Poker Face, David Guetta - When Love Takes Ove, The Black Eyed Peas - I Gotta Feeling', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Mozart l''Opéra Rock - L''assasymphonie', 'Chanson francophone de l''année', 'Coeur de Pirate - Comme des enfants, Gérald de Palmas - Au bord de l''eau, Helmut Fritz - Ca m''énerve, Mozart Opéra Rock - L''assasymphonie', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Robbie Williams, Beyoncé Knowles', 'Award d''honneur', NULL, 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'Christophe Willem - Caféine', 'Album français de l''année', 'Emmanuel Moire - L''équilibre, Diam''s - S.O.S, Grégoire - Toi+Moi, Mozart - L''opéra-rock, Christophe Willem - Caféine', 'Nikos Aliagas');
-insert into  trophee(award,vainqueur,categorie,nomines,presentateur) values (2010, 'David Guetta - One Love', 'Album international de l''année', 'Charlie Winston - Hobo, Beyoncé - I Am... Sasha Fierce, The Black Eyed Peas - The E.N.D, Lady Gaga - The Fame, David Guetta - One Love', 'Nikos Aliagas');
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Emma Daumas', 'Révélation francophone de l''année', 'Emma Daumas, K.Maro, Singuila, Tragédie, Slaï', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Blue', 'Groupe ou duo international de l''année', 'Usher et Alicia Keys, The Black Eyed Peas, Blue, Destiny''s Child, U2', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Roch Voisine', 'Artiste masculin francophone de l''année', 'Calogero, Corneille, Gérald De Palmas, Roch Voisine, Willy Denzey', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'The Black Eyed Peas - Elephunk', 'Album international de l''année', 'Alicia Keys - The Diary of Alicia Keys, The Black Eyed Peas - Elephunk, Eminem - Encore, Maroon 5 - Songs About Jane, Usher - Confessions', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Maroon 5', 'Révélation internationale de l''année', 'Jamelia, Joss Stone, Keane, Maroon 5, The Servant', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Jenifer - Le Passage', 'Album français de l''année', 'Calogero - Calog3ro, Corneille - Parce qu''on vient de loin, Gérald De Palmas - Un homme sans racines, Jenifer - Le Passage, Pascal Obispo - Live Fan/Studio Fan', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Avril Lavigne', 'Artiste féminine internationale de l''année', 'Alicia Keys, Avril Lavigne, Anastacia, Beyoncé, Britney Spears', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Corneille - Parce qu''on vient de loin', 'Clip de l''année', 'Britney Spears - Toxic, Corneille - Parce qu''on vient de loin, 113 et Magic System et Mohamed Lamine - Un gaou à Oran, Eminem - Just Lose It, OutKast - Hey Ya!', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Maroon 5 - This Love', 'Chanson internationale de l''année', 'Anastacia - Left Outside Alone, Aventura - Obsesión, Maroon 5 - This Love, The Black Eyed Peas - Shut Up, Usher - Yeah!', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Usher', 'Artiste masculin international de l''année', 'Billy Crawford, Eminem, Lenny Kravitz, Robbie Williams, Usher', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Jenifer', 'Artiste féminine francophone de l''année', 'Chimène Badi, Leslie, Jenifer, Natasha St-Pier, Nâdiya', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'Calogero et Passi', 'Groupe ou duo francophone de l''année', '113 et Magic System et Mohamed Lamine, Calogero et Passi, Les Connards, Leslie et Amine, Natasha St-Pier et Pascal Obispo', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2005, '22/1', 'K.Maro - Femme Like U', 'Chanson francophone de l''année', 'Calogero et Passi - Face à la mer, Corneille - Parce qu''on vient de loin, K.Maro - Femme Like U, Leslie et Amine - Sobri, Natasha St-Pier et Pascal Obispo - Mourir demain', 'Anthony Kavanagh');
+
+
+-- 2004
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Nolwenn Leroy', 'Révélation francophone de l''année', 'Chimène Badi, Thierry Cham, Willy Denzey, Diam''s, Nolwenn Leroy', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Evanescence', 'Révélation internationale de l''année', 'Benny Benassi, Beyoncé, Evanescence, Norah Jones, Avril Lavigne', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Calogero', 'Artiste masculin francophone de l''année', 'Calogero, Marc Lavoine, Pascal Obispo, Florent Pagny, MC Solaar', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Justin Timberlake', 'Artiste masculin international de l''année', 'Eminem, Seal, Shaggy, Justin Timberlake, Robbie Williams', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Jenifer', 'Artiste féminine francophone de l''année', 'Jenifer, Saya, Natasha St-Pier, Hélène Ségara, Ophélie Winter', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Dido', 'Artiste féminine internationale de l''année', 'Dido, Madonna, Kylie Minogue, Laura Pausini, P!nk', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Kyo et Sita - Le Chemin', 'Chanson francophone de l''année', 'Alphonse Brown - Le Frunkp, Kyo et Sita - Le Chemin, Jocelyne Labylle et Cheela et Jacob Desvarieux et Passi - Laisse parler les gens, Pascal Obispo - Fan, Florent Pagny - Ma liberté de penser', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Blue et Elton John - Sorry Seems to Be the Hardest Word', 'Chanson internationale de l''année', 'DJ BoBo - Chihuahua, Blue et Elton John - Sorry Seems to Be the Hardest Word, Phil Collins - Can''t Stop Loving You, Hermes House Band et DJ Ötzi - Live Is Life, Shaggy et Brian et Tony Gold/Sean Paul - Hey Sexy Lady', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Kyo - Le Chemin', 'Album français de l''année', 'Calogero - Calogero, Céline Dion - 1 fille et 4 types, Kyo - Le Chemin, Florent Pagny - Ailleurs land, Hélène Ségara - Humaine', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Dido - Life for Rent', 'Album international de l''année', 'Dido - Life for Rent, Madonna - American Life, Placebo - Sleeping with Ghosts, Justin Timberlake - Justified, Shania Twain - Up!', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Kyo', 'Groupe ou duo francophone de l''année', 'Dis l''heure 2 zouk, Kyo, Leslie et Magic System, Mickey 3D, 113', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Linkin Park', 'Groupe ou duo international de l''année', 'Blue, Craig David et Sting, Linkin Park, Placebo, 3T', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2004, '24/1', 'Kyo', 'Site Internet Musical', 'Calogero, Kyo, Florent Pagny, Christina Aguilera, Beyoncé, Dido, Kylie Minogue, Madonna, Britney Spears, Robbie Williams', 'Anthony Kavanagh');
+
+
+-- 2003
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Jenifer', 'Révélation francophone de l''année', 'Calogero, David Charvet, Jenifer, Daniel Lévi, Rohff', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Gérald De Palmas', 'Artiste masculin francophone de l''année', 'Gérald De Palmas, Johnny Hallyday, Marc Lavoine, Renaud, MC Solaar', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Mylène Farmer', 'Artiste féminine francophone de l''année', 'Ève Angeli, Mylène Farmer, Natasha St-Pier, Ophélie Winter, Zazie', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Renaud et Axelle Red - Manhattan-Kaboul', 'Chanson francophone de l''année', 'Indochine - J''ai demandé à la lune, Marc Lavoine et Cristina Marocco - J''ai tout oublié, Renaud et Axelle Red - Manhattan-Kaboul, Rohff - Qui est l''exemple ?, Magic System - 1er Gaou', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Indochine - Paradize', 'Album français de l''année', 'Jean-Jacques Goldman - Chansons pour les pieds, Johnny Hallyday - À la vie à la mort, Indochine - Paradize, Marc Lavoine - Marc Lavoine, Renaud - Boucan d''enfer', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Renaud et Axelle Red', 'Groupe ou duo francophone de l''année', 'Indochine, Marc Lavoine et Cristina Marocco, Nuttea et UB40, Renaud et Axelle Red, Le 6/9', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Las Ketchup', 'Révélation internationale de l''année', 'Sophie Ellis-Bextor, Ronan Keating, Las Ketchup, P!nk, Cunnie Williams', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Billy Crawford', 'Artiste masculin international de l''année', 'Billy Crawford, Eminem, Tiziano Ferro, Will Smith, Robbie Williams', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Shakira', 'Artiste féminine internationale de l''année', 'Mariah Carey, Jennifer Lopez, Laura Pausini, Shakira, Shania Twain', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Shakira - Whenever Wherever', 'Chanson internationale de l''année', 'Sophie Ellis-Bextor - Murder on the Dancefloor, David Guetta - Love Don''t Let Me Go, Las Ketchup - Aserejé, Laura Pausini - E ritorno da te, Shakira - Whenever Wherever', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Shakira - Laundry Service', 'Album international de l''année', 'Eminem - The Eminem Show, Tiziano Ferro - Rosso Relativo, Jennifer Lopez - J To Tha L-O!, Laura Pausini - E ritorno da te, Shakira - Laundry Service', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'The Calling', 'Groupe ou duo international de l''année', 'Atomic Kitten, The Calling, P. Diddy et Usher, Umberto Tozzi et Lena Ka, U2', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2003, '18/1', 'Jennifer Lopez', 'Site Internet Musical', 'Eminem, Jennifer Lopez, P!nk, U2, Robbie Williams, Calogero, Gérald De Palmas, Doc Gynéco, Indochine, Noir Désir', 'Anthony Kavanagh');
+
+
+-- 2002
+
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Ève Angeli', 'Révélation francophone de l''année', 'Ève Angeli, Nuttea, Matt Houston, Ginie Line, Sally bat des ailes', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Garou', 'Artiste masculin francophone de l''année', 'Gérald De Palmas, Garou, Yannick Noah, Pascal Obispo, MC Solaar', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Mylène Farmer', 'Artiste féminine francophone de l''année', 'Lââm, Mylène Farmer, Alizée, Hélène Ségara, Zazie', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Zazie et Axel Bauer - A ma place', 'Chanson francophone de l''année', 'Zazie et Axel Bauer - A ma place, Nuttea - Trop peu de temps , Gérald de Palmas - J''en rève encore, MC Solaar - Hasta la vista, Yannick Noah - La voix des sages', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Gérald de Palmas - Marcher dans le sable', 'Album français de l''année', 'Gérald de Palmas - Marcher dans le sable, Zazie - La Zizanie, Noir Désir - Des visages des figures, Florent Pagny - Châtelet les Halles, MC Solaar - Cinquième As', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Céline Dion et Garou', 'Groupe ou duo francophone de l''année', 'Céline Dion et Garou, Zazie et Axel Bauer, Mylène Farmer et Seal, La Troupe de Roméo et Juliette , Noir Desir', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Dido', 'Révélation internationale de l''année', 'Usher, Dido, Westlife, Mary J. Blige, Billy Crawford', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Michael Jackson', 'Artiste masculin international de l''année', 'Michael Jackson, Craig David, Shaggy, Manu Chao, Robbie Williams', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Jennifer Lopez', 'Artiste féminine internationale de l''année', 'Mariah Carey, Jennifer Lopez, Geri Halliwell, Madonna, Kylie Minogue', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Geri Halliwell - It''s Raining', 'Chanson internationale de l''année', 'Geri Halliwell - It''s Raining, Michael Jackson - You Rock My World, Shaggy - It Wasn''t Me , Dante Thomas - Miss California , Guillaume Atlan - Starlight', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Dido - No Angel ', 'Album international de l''année', 'Dido - No Angel, U2 - All that You Can''t leave Behind, Daft Punk - Discovery, Jamiroquai - A Funk Odyssey , Manu Chao - Proxima', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Destiny''s Child', 'Groupe ou duo international de l''année', 'Destiny''s Child, Daft Punk, U2, The Cranberries, Depeche Mode', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Garou ', 'Site Internet Musical', 'Garou, Gorillaz, Lenny Kravatz, U2, Axel Bauer, Gérald De Palmas, Jamiroquai, Depeche Noir, MC Solaar', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2002, '19/1', 'Opération Pièces Jaunes ', 'Award d''honneur', Null, 'Anthony Kavanagh');
+	
+
+-- 2001 
+
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Alizée', 'Révélation francophone de l''année', 'Alizée, Assia, Yannick, Damien Saez, Saïan Supa Crew', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Pascal Obispo', 'Artiste masculin francophone de l''année', 'Pascal Obispo, Patrick Bruel, Yannick Noah, Francis Cabrel, Florent Pagny', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Mylène Farmer', 'Artiste féminine francophone de l''année', 'Vannessa Paradis, Mylène Farmer, Axelle Red, Hélène Ségara, Patricia Kaas', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'La Troupe de Roméo et Juliette - Les Rois du monde', 'Chanson francophone de l''année', 'La Troupe de Roméo et Juliette - Les Rois du monde, Hélène Ségara - Elle tu l''aimes, Les dix Commandements - L''envie d''aimer, Saïan Supa Crew - Angela, Yannick Noah - Ces soirées là', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Hélène Ségara - Au nom d''une femme', 'Album français de l''année', 'Hélène Ségara - Au nom d''une femme, Les dix Commandements - Les Dix Commandements, Pascal Obispo - Soledad, La Troupe de Roméo et Juliette - Roméo et Juliette (les Rois du monde) , Vannessa Paradis - Bliss', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Les dix Commandements', 'Groupe ou duo francophone de l''année', 'Les dix Commandements, Manau, La Troupe de Roméo et Juliette, Louise attaque, Saïan Supa Crew', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Anastacia', 'Révélation internationale de l''année', 'Eminem, Modjo, Sonique, Lene Marlin, Anastacia', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Moby', 'Artiste masculin international de l''année', 'Moby, Robbie Williams, R. Kelly, Eagle-Eye Cherry, Ricky Martin', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Madonna', 'Artiste féminine internationale de l''année', 'Shania Twain, Jennifer Lopez, Britney Spears, Madonna, Kylie Minogue', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Anastacia - I''m Outta Love', 'Chanson internationale de l''année', 'Anastacia - I''m Outta Love, Tom Jones - Sex Bomb, R. Kelly - If I could Turn Back the Hands of Time, Carlos Santana - Maria Maria, Madonna - Music', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Madonna - Music ', 'Album international de l''année', 'Madonna - Music, Carlos Santana - Supernatural, Moby - Play, Britney Spears - Oops!... I Did it Again, Shania Twain - Come On Over', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'The Corrs', 'Groupe ou duo international de l''année', 'Destiny''s Child, The Corrs, U2, All Saints, Bon Jovi', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Alizée', 'Site Internet Musical', 'All Saints, Passi, Francis Cabrel, Madonna, U2, Daft Punk, Robbie Williams, The Corrs, Alizée, Britney Spears', 'Anthony Kavanagh');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2001, '20/1', 'Les Enfoirés ', 'Award d''honneur', Null, 'Anthony Kavanagh');
+	
+
+
+ -- 2000
 
 
 
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Hélène Ségara', 'Révélation francophone de l''année', 'Hélène Ségara,   ', 'Ophélie Winter');
 
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'David Hallyday', 'Artiste masculin francophone de l''année', 'David Hallyday,   ', 'Ophélie Winter');
 
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Mylène Farmer', 'Artiste féminine francophone de l''année', 'Céline Dion, Mylène Farmer, Axelle Red, Lara Fabian, Ophélie Winter', 'Ophélie Winter');
 
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Zebda - Tomber la chemise', 'Chanson francophone de l''année', '   ', 'Ophélie Winter');
 
-----
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Mylène Farmer - Innamoramento ', 'Album français de l''année', 'Mylène Farmer - Innamoramento, Zebda - Essence ordinaire, Pierpoljak - Kingston Karma, Céline Dion - Au coeur du Stade, David Hallyday - Un paradis / Un enfer', 'Ophélie Winter');
 
-     
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Zebda', 'Groupe ou duo francophone de l''année', '  ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Tina Arena', 'Révélation internationale de l''année', '  ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Will Smith', 'Artiste masculin international de l''année', '  ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Mariah Carey ', 'Artiste féminine internationale de l''année', '  ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Mambo N°5 - Lou Bega', 'Chanson internationale de l''année', '  ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Whitney Houston - My Love Is Your Love ', 'Album international de l''année', '  ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Texas', 'Groupe ou duo international de l''année', '   ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Jamiroquai', 'Site Internet Musical', '  ', 'Ophélie Winter');
+
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Bono, Tina Turner ', 'Award d''honneur', Null, 'Ophélie Winter');
+	
+insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Mylène Farmer', 'Concert de l''année', ' ', 'Ophélie Winter');
+	
+ 
 
 
