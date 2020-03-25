@@ -30,6 +30,93 @@ create table representants(
 );
 
 
+-- insertion de donnees de la table representants
+
+
+Insert into representants(artiste, pays, continent) values('Raphael ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values(' Robbie Williams','Royaume-Uni ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Jenifer ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Madonna ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Gregory Lemarchal ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('James Blunt ','Royaume-uni ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Mylene Farmer ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('M. Pokora ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Black Eyed Peas ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Le Roi Soleil ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values(' Bob Geldof','Irlande ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Christophe Maé','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Nelly Furtado ','Canada ','Amérique');
+
+Insert into representants(artiste, pays, continent) values(' Justin Timberlake','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Diam''s ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Rihanna ',' Barbade','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Christina Aguilera ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Evanescence ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values(' Bob Sinclar','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Céline Dion ','Canada ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Christophe Williem ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Mika ','Royaume-uni ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Avril Lavigne ','Canada ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Britney Spears ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Superbus ',' France','Europe ');
+
+Insert into representants(artiste, pays, continent) values(' Tokio Hotel',' Allemagne','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Fatal Bazooka ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Coldplay ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Zaho ','Algerie ','Afrique ');
+
+Insert into representants(artiste, pays, continent) values('Erique Iglesias ','Espagne ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Katy Perry ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values(' Cléopâtre','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('The Pussycat Dolls ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Beyoncé Knowles ','USA ','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('David Guetta ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values(' Sofia Essaïdi','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values(' Mozart','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values(' Florent Mothe','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values(' Lady Gaga',' USA','Amérique ');
+
+Insert into representants(artiste, pays, continent) values('Helmut Fritz ','France ','Europe ');
+
+Insert into representants(artiste, pays, continent) values('Usher ','USA ','Amérique ');
+
+
+
 -- insertion de donnees de la table trophee
 
 --2019
@@ -329,33 +416,30 @@ insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) value
 insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2011,'22/1', 'Flo Rida et David Guetta - Club Can''t Handle Me', 'Hit de l''année', 'K''naan et Féfé - Wavin''Flag, Remady - Give me a sign, Usher et Pitbull - DJ Got Us Fallin''in Love, Flo Rida et David Guetta - Club Can''t Handle Me, Plan B - She Said, Yolanda Be Cool - We No Speak Americano', 'Nikos Aliagas');
 
 
+
 --2010
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Florent Mothe', 'Révélation francophone de l''année', 'Cœur de pirate, Jena Lee, Sliimy, Tom Frager, Florent Mothe', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010, '23/1','Florent Mothe ','Révélation francophone de l''année ','Florent Mothe, Cœur de pirate, Jena Lee, Sliimy ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Lady Gaga', 'Révélation internationale de l''année', 'Agnes, Charlie Winston, Justin Nozuka, Milow, Lady Gaga', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', 'Lady Gaga ','Révélation internationale de l''année ','Lady Gaga, Agnes,Agnes, Justin Nozuka, Milow ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', 'Jena Lee, Florent Mothe', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Mozart l''Opéra Rock', 'Groupe ou duo francophone de l''année', 'Bisso Na Bisso, Raï''n''B Fever et Magic System et Khaled, Superbus, Tryo, Mozart, l''opéra rock', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', 'Sofia Essaïdi ','Artiste féminine francophone de l''année ','Sofia Essaïdi, Amel Bent, Diam''s, Sheryfa Luna, Zaho ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Tokio Hotel', 'Groupe ou duo international de l''année', 'The Black Eyed Peas, Green Day, Jay-Z et Alicia Keys, U2, Tokio Hotel', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', 'Rihanna ','Artiste fminine internationale de l''année ',' Rihanna, Alicia Keys, Lily Allen, Mariah Carey, Shakira','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', 'Sliimy , Tom Frager', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas');  
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Sofia Essaidi', 'Artiste féminine francophone de l''année', 'Amel Bent, Diam''s, Sheryfa Luna, Zaho, Sofia Essaidi', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', 'Christophe Willem ',' Artiste masculin francophone de l''année','Christophe Willem, David Guetta, Emmanuel Moire, Gérald De Palmas, Grégoire ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Christophe Willem', 'Artiste masculin francophone de l''année', 'David Guetta, Emmanuel Moire, Gérald de Palmas, Grégoire, Christophe Willem', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', ' Robbie Williams ','Artiste masculin international de l''année ',' Robbie Williams, James Morrison, Jason Mraz, Michael Bublé, Mika ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Rihanna', 'Artiste féminine internationale de l''année', 'Alicia Keys, Lily Allen, Mariah Carey, Shakira, Rihanna', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values(2010,'23/1', 'Mozart l''Opéra Rock', 'Groupe ou duo francophone de l''année', 'Bisso Na Bisso, Raï''n''B Fever et Magic System et Khaled, Superbus, Tryo, Mozart, l''opéra rock','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Robbie Williams', 'Artiste masculin international de l''année', 'James Morrison, Jason Mraz, Michael Bublé, Mika, Robbie Williams', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', ' Black Eyed Peas-I Gotta Feeling ','Chanson internationale de l''année ','I Gotta Feeling -Black Eyed Peas, When Love Takes Over -   David Guetta featuring Kelly Rowland, Poker Face - Lady Gaga, Fuck You - Lily Allen, I Know You Want Me (Calle Ocho) - Pitbull ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'The Black Eyed Peas - I Gotta Feeling', 'Chanson internationale de l''année', 'Lily Allen - Fuck You, Pitbull - I Know You Want me, Lady Gaga - Poker Face, David Guetta - When Love Takes Ove, The Black Eyed Peas - I Gotta Feeling', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', 'One Love-David Guetta','Album international de l''année ','One Love -   David Guetta, I Am... Sasha Fierce -   Beyoncé Knowles, Hobo -  Charlie Winston, The Fame -   Lady Gaga, The E.N.D. -   Black Eyed Peas ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Mozart l''Opéra Rock - L''assasymphonie', 'Chanson francophone de l''année', 'Coeur de Pirate - Comme des enfants, Gérald de Palmas - Au bord de l''eau, Helmut Fritz - Ca m''énerve, Mozart Opéra Rock - L''assasymphonie', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', 'Caféine -   Christophe Willem ','Album francophone de l''année ','Caféine -   Christophe Willem, SOS - Drapeau de Chypre   Diam''s, L''Équilibre -   Emmanuel Moire, Toi + Moi -   Grégoire, Mozart, l''Opéra Rock -   Mozart, l''opéra rock ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Robbie Williams, Beyoncé', 'Award d''honneur', NULL, 'Nikos Aliagas');
-
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'Christophe Willem - Caféine', 'Album français de l''année', 'Emmanuel Moire - L''équilibre, Diam''s - S.O.S, Grégoire - Toi+Moi, Mozart - L''opéra-rock, Christophe Willem - Caféine', 'Nikos Aliagas');
-
-insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2010,'23/1', 'David Guetta - One Love', 'Album international de l''année', 'Charlie Winston - Hobo, Beyoncé - I Am... Sasha Fierce, The Black Eyed Peas - The E.N.D, Lady Gaga - The Fame, David Guetta - One Love', 'Nikos Aliagas');
+insert into  trophee(award, dateA, vainqueur, categorie, nomines, audience, artistesPresents, remiseTrophee, performances, partdemarche, sponsors, lieu, diffusion, production, realisation, presentateur)  values (2010,'23/1', '  Mozart, l''opéra rock - L''Assasymphonie ','Chanson francophone de l''année ','  Mozart, l''opéra rock - L''Assasymphonie, Cœur de pirate - Comme des enfants, Gérald De Palmas - Au bord de l''eau, Helmut Fritz - Ça m''énerve ','4 894 000','The Black Eyed Peas, Pharrell Williams, Christophe Maé, Christophe Willem, Mozart, l''opéra rock, Robbie Williams, Michael Bublé, Malika Ménard (Miss France 2010), Rihanna, Kelly Rowland, Beyoncé Knowles, Jay-Z, Pete Wentz, Dita von Teese, Kamel Ouali, Victoria Silvstedt, David Guetta, Helmut Fritz, Sheryfa Luna, Diam''s, David Hallyday, Laura Smet, Ke$ha, Cœur de pirate, Jena Lee, Mika, Lilian Thuram, Superbus.', '', 'Black Eyed Peas feat. David Guetta-I Gotta Feeling , Mozart, l''opéra rock-L''Assasymphonie, David Guetta feat. Kelly Rowland-When Love Takes Over, Sexy Bitch , Christophe Maé-Dingue, dingue, dingue ,Robbie Williams-Morning Sun , Rihanna-Russian Roulette , Christophe Willem-Heartbox , Coeur de pirate-Comme des enfants , Mika-Rain , Johnny Hallyday feat. Laura Smet-On Se Fait Peur , Michael Bublé-Haven''t Met You Yet , Black Eyed Peas-Meet Me Halfway ,Gérald de Palmas-Au bord de l''eau, Diam''s-Peter Pan , Michael Bublé feat. Nikos Aliagas-Cry Me a River ,Helmut Fritz-Ça m''énerve , Jay-Z-Empire State of Mind , Superbus-Addictions', '24,4 %', 'Renault, Nissan','MIDEM','TF1, NRJ','TF1 Production', 'Gérard Pullicino, Gilles Amado, Tristan Carné', ' Nikos Aliagas'); 
 
 
 
