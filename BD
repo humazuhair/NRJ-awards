@@ -33,23 +33,65 @@ create table representants(
 -- insertion de donnees de la table representants
 
 
-Insert into representants(artiste, pays, continent) values('Christophe Williem,Helmut Fritz, Florent Mothe, Sofia Essaïdi, David Guetta, Cléopâtre, Fatal Bazooka, Superbus, Christophe Maé, Diam''s,Bob Sinclar, Raphael,Jenifer,Le Roi Soleil, Gregory Lemarchal, Mylene Farmer, M. Pokora ','France ','Europe ');
+insert into representants values('Tal,Christophe Williem,Helmut Fritz,Cléopâtre, Fatal Bazooka, Superbus, Diam''s,Bob Sinclar, Raphael, Le Roi Soleil, Gregory Lemarchal, Mylene Farmer, Florent Mothe, Sofia Essaïdi,Clara Luciani, Vianney, Dadju, Philippine, Trois Cafés Gourmands, Maëlle, Boulevard des airs, Hyphen Hyphen, Bilal Hassani, Naestro, Slimane, Orelsan,  Aya Nakamura, Eddy de Pretto, Hoshi, Marwa Loud, Vegedream, Awa Imani, Petit Biscuit, Vitaa, Nolwenn Leroy Willy William, Feder, Boostee, Lartiste, Léa Paci, Arcadian, Ofenbach, Bigflo et Oli, Tibz, Kungs, Niska, Les 3 Mousquetaires, Kids United, Amir, Jul, Ridsa, Jain, Slimane, Claudio Capéo, Shy''m, Imany, Jenifer, Christophe Maé, Charles Aznavour, Martin Solveig, Maude, DJ Snake, Joyce Jonathan, Vannessa Paradis, Zaz, Matt Pokora, Keen''V, David Guetta, Calogero, Julien Doré, Kendji Girac, Black M, David Carreira, Fréro Delavega, Indila, Lilly Wood and the Prick, Daft Punk, Kyo, Indochine, Shaka Ponk, Placebo, Christine and the Queens, Zazie, Soprano, Louane, Lilian Renaud, Marina Kaye, Nekfeu, Cats on trees, L.E.J, La legende du roi Arthur, Brigitte','France','Europe');
 
-Insert into representants(artiste, pays, continent) values(' Robbie Williams,James Blunt,Mika  ','Royaume-Uni ','Europe ');
+insert into representants values('Stromae, Angèle, Roméo Elvis','Belgique','Europe');
 
-Insert into representants(artiste, pays, continent) values('Madonna,Usher, Beyoncé Knowles, Lady Gaga, Evanescence, The Pussycat Dolls, Coldplay, Katy Perry  ,Britney Spears, Black Eyed Peas,Justin Timberlake,Christina Aguilera ','USA ','Amérique ');
+insert into representants values('David Carreira, Lisandro Cuxi','Portugal','Europe');
 
-Insert into representants(artiste, pays, continent) values(' Bob Geldof','Irlande ','Europe ');
+insert into representants values('Tal, Amir','Israël','Asie');
 
-Insert into representants(artiste, pays, continent) values('Nelly Furtado ,Céline Dion, Avril Lavigne','Canada ','Amérique');
+insert into representants values('Magic System, Vegedream','Côte d''Ivoire','Afrique');
 
-Insert into representants(artiste, pays, continent) values('Rihanna ',' Barbade','Amérique ');
+insert into representants values('Ariana Grande, Tyga, Jonas Brothers, Bradley Cooper, Billy Ray Cyrus, Alicia Keys, Billie Eilish, Ava Max, Lil Nas X, Miguel, Post Malone, Cardi B, Camila Cabello Selena Gomez, Miley Cyrus, P!nk, DJ Hhaled, Big Sean, Julia Micheals ,Twenty One Pilots, Fifth Harmony, Mike Prosner, The Chainsmokers, Lady Gaga, Charlie Puth, Nicky Minaj, Major Lazer, Mark Ronson, Bruno Mars, Nicky Jam, Chris Brown, Wiz Khalifa, 5 seconds of summer, Aloe Blacc, Beyoncé, Katy Perry, Taylor Swift, Pharell Williams, Jason Derulo, Lenny Kravitz, Pitbull, Maroon 5, Imagine Dragons, OneRepublic, Jenifer Lopez, Micheal Jackson, Justin Timberlake, ','USA','Amerique');
 
-Insert into representants(artiste, pays, continent) values(' Tokio Hotel',' Allemagne','Europe ');
+insert into representants values('Iggy Azalea, Sia','Australie','Oceanie');
 
-Insert into representants(artiste, pays, continent) values('Zaho ','Algerie ','Afrique ');
+insert into representants values('Milky Chance, Tokio Hotel, Robin Schulz','Allemagne','Europe');
 
-Insert into representants(artiste, pays, continent) values('Erique Iglesias ','Espagne ','Europe ');
+insert into representants values('London Grammar,Robbie Williams,James Blunt, Jorja Smith, Dua Lipa, Liam Payne, Clean Bandit, Rag''n''Bone Man, Jonas Blue, Harry Styles, Julian Perretta, Sting, Adèle, Calvin Harris, Muse, Major Lazer, Sam Smith, Ed Sheeran, One Direction, Coldplay, Mika, Ellie Goulding','Royaume-Uni','Europe');
+
+insert into representants values('Nicky Minaj','Trinité-et-Tobago','Amerique');
+
+insert into representants values('One Direction, U2, Gavin James,Bob Geldof','Irlande','Europe');
+
+insert into representants values('Claudia Leite','Bresil','Amerique');
+
+insert into representants values('Coeur de Pirate, The Weeknd, Justin Bieber, Drake, Céline Dion, Zaho, Lenni-Kim, Shawn Mendes,Nelly Furtado , Avril Lavigne','Canada','Amerique');
+
+insert into representants values('Rihanna','Barbade','Amerique');
+
+insert into representants values('Enrique Iglesias, Alvaro Soler, Mabel','Espagne','Europe');
+
+insert into representants values('Mika','Liban','Asie');
+
+insert into representants values('OMI, Sean Paul','Jamaique','Amerique');
+
+insert into representants values('Kygo','Norvège','Europe');
+
+insert into representants values('MØ, Lukas Graham','Danemark','Europe');
+
+insert into representants values('Afrojack, Martin Garrix, Armin van Buuren','Pays-Bas','Europe');
+
+insert into representants values('Avicii, Zara Larsson','Suède','Europe');
+
+insert into representants values('Charles Aznavour','Arménie','Asie');
+
+insert into representants values('Gims','RDC','Afrique');
+
+insert into representants values('Zaho','Algérie','Afrique');
+
+insert into representants values('Shakira, J Balvin','Colombie','Amerique');
+
+insert into representants values('Luis Fonsi, Daddy Yankee, Pedro Capo, Farruko','Porto Rico','Amerique');
+	
+insert into representants values('Aya Nakamura','Mali','Afrique');
+
+insert into representants values('Camila Cabello','Cuba','Amerique');
+
+insert into representants values('Magic System','Mexique','Amerique');
+
+insert into representants values('Lewis Capaldi','Ecosse','Europe');
 
 
 
@@ -687,70 +729,7 @@ insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) value
 insert into  trophee(award,dateA,vainqueur,categorie,nomines,presentateur) values (2000, '22/1', 'Mylène Farmer', 'Concert de l''année', ' ', 'Ophélie Winter');
 	
  
- 
--- insertion de donnees de la table representants
 
-
-
-insert into representants values('Tal, Clara Luciani, Vianney, Dadju, Philippine, Trois Cafés Gourmands, Maëlle, Boulevard des airs, Hyphen Hyphen, Bilal Hassani, Naestro, Slimane, Orelsan,  Aya Nakamura, Eddy de Pretto, Hoshi, Marwa Loud, Vegedream, Awa Imani, Petit Biscuit, Vitaa, Nolwenn Leroy Willy William, Feder, Boostee, Lartiste, Léa Paci, Arcadian, Ofenbach, Bigflo et Oli, Tibz, Kungs, Niska, Les 3 Mousquetaires, Kids United, Amir, Jul, Ridsa, Jain, Slimane, Claudio Capéo, Shy''m, Imany, Jenifer, Christophe Maé, Charles Aznavour, Martin Solveig, Maude, DJ Snake, Joyce Jonathan, Vannessa Paradis, Zaz, Matt Pokora, Keen''V, David Guetta, Calogero, Julien Doré, Kendji Girac, Black M, David Carreira, Fréro Delavega, Indila, Lilly Wood and the Prick, Daft Punk, Kyo, Indochine, Shaka Ponk, Placebo, Christine and the Queens, Zazie, Soprano, Louane, Lilian Renaud, Marina Kaye, Nekfeu, Cats on trees, L.E.J, La legende du roi Arthur, Brigitte','France','Europe');
-
-insert into representants values('Stromae, Angèle, Roméo Elvis','Belgique','Europe');
-
-insert into representants values('David Carreira, Lisandro Cuxi','Portugal','Europe');
-
-insert into representants values('Tal, Amir','Israël','Asie');
-
-insert into representants values('Magic System, Vegedream','Côte d''Ivoire','Afrique');
-
-insert into representants values('Ariana Grande, Tyga, Jonas Brothers, Bradley Cooper, Billy Ray Cyrus, Alicia Keys, Billie Eilish, Ava Max, Lil Nas X, Miguel, Post Malone, Cardi B, Camila Cabello Selena Gomez, Miley Cyrus, P!nk, DJ Hhaled, Big Sean, Julia Micheals Twenty One Pilots, Fifth Harmony, Mike Prosner, The Chainsmokers, Lady Gaga, Charlie Puth, Nicky Minaj, Major Lazer, Mark Ronson, Bruno Mars, Nicky Jam, Chris Brown, Wiz Khalifa, 5 seconds of summer, Aloe Blacc, Beyoncé, Katy Perry, Taylor Swift, Pharell Williams, Jason Derulo, Lenny Kravitz, Pitbull, Maroon 5, Imagine Dragons, OneRepublic, Jenifer Lopez, Micheal Jackson, Justin Timberlake, ','USA','Amerique');
-
-insert into representants values('Iggy Azalea, Sia','Australie','Oceanie');
-
-insert into representants values('Milky Chance, Tokio Hotel, Robin Schulz','Allemagne','Europe');
-
-insert into representants values('London Grammar, Jorja Smith, Dua Lipa, Liam Payne, Clean Bandit, Rag''n''Bone Man, Jonas Blue, Harry Styles, Julian Perretta, Sting, Adèle, Calvin Harris, Muse, Major Lazer, Sam Smith, Ed Sheeran, One Direction, Coldplay, Mika, Ellie Goulding','Royaume-Uni','Europe');
-
-insert into representants values('Nicky Minaj','Trinité-et-Tobago','Amerique');
-
-insert into representants values('One Direction, U2, Gavin James','Irlande','Europe');
-
-insert into representants values('Claudia Leite','Bresil','Amerique');
-
-insert into representants values('Coeur de Pirate, The Weeknd, Justin Bieber, Drake, Céline Dion, Zaho, Lenni-Kim, Shawn Mendes','Canada','Amerique');
-
-insert into representants values('Rihanna','Barbade','Amerique');
-
-insert into representants values('Enrique Iglesias, Alvaro Soler, Mabel','Espagne','Europe');
-
-insert into representants values('Mika','Liban','Asie');
-
-insert into representants values('OMI, Sean Paul','Jamaique','Amerique');
-
-insert into representants values('Kygo','Norvège','Europe');
-
-insert into representants values('MØ, Lukas Graham','Danemark','Europe');
-
-insert into representants values('Afrojack, Martin Garrix, Armin van Buuren','Pays-Bas','Europe');
-
-insert into representants values('Avicii, Zara Larsson','Suède','Europe');
-
-insert into representants values('Charles Aznavour','Arménie','Asie');
-
-insert into representants values('Gims','RDC','Afrique');
-
-insert into representants values('Zaho','Algérie','Afrique');
-
-insert into representants values('Shakira, J Balvin','Colombie','Amerique');
-
-insert into representants values('Luis Fonsi, Daddy Yankee, Pedro Capo, Farruko','Porto Rico','Amerique');
-	
-insert into representants values('Aya Nakamura','Mali','Afrique');
-
-insert into representants values('Camila Cabello','Cuba','Amerique');
-
-insert into representants values('Magic System','Mexique','Amerique');
-
-insert into representants values('Lewis Capaldi','Ecosse','Europe');
 
 
  
