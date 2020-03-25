@@ -1,8 +1,3 @@
-Quel cérémonie des "NRJ Music Awards" a pu attire le plus d’audience?
-
-select max(audience) from trophee;
-
-Combien de cérémonie des "NRJ Music Awards" ont eu lieu a MIDEM cannes?
 
 
 drop table  trophee;
