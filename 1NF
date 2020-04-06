@@ -22,7 +22,7 @@ realisation varchar2(100),
 presentateur  varchar2(50)
 );
 
---
+------------------
 
 drop table NF_nomines;
 create table NF_nomines(
@@ -182,4 +182,44 @@ BEGIN
    END LOOP;
    CLOSE c5;
 END;
+
+----------------code remisetrophee
+
+drop table NF1_remisetrophee;
+create table NF1_remisetrophee(
+	"award" VARCHAR2(5), 
+   "categorie" VARCHAR2(1000),
+   "remisetrophee" VARCHAR2(1000)
+);
+ 
+DECLARE
+
+cursor c6 is 
+select award,categorie, remisetrophee 
+from trophee
+order by vainqueur
+fetch first (select count(award) from trophee) rows with ties;
+RT_award varchar(5);
+RT_categorie varchar(1000);
+RT_remisetrophee varchar(1000);
+
+  
+BEGIN
+
+open c6;
+
+for i in 1..16 loop
+fetch c6 into rt_award, rt_categorie, rt_remisetrophee;
+exit when c6%notfound;
+
+insert into NF1_remisetrophee
+select rt_award, rt_categorie, regexp_substr(rt_remisetrophee,'[^,]+', 1, level) from dual
+      connect by regexp_substr(rt_remisetrophee, '[^,]+', 1, level) is not null ;
+      
+commit;
+end loop;
+close c6;
+
+END;
+
 
