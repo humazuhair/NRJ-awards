@@ -223,3 +223,43 @@ close c6;
 END;
 
 
+ drop table nf1_1_performances;
+ create table nf1_1_performances(
+ AWARD           VARCHAR2(5)  , 
+CATEGORIE       VARCHAR2(100) ,
+ARTISTE         VARCHAR2(300) ,
+TITRE           VARCHAR2(300)
+);
+
+DECLARE
+
+cursor c7 is 
+select award,categorie, artiste, titre 
+from nf1_performances
+order by artiste
+fetch first (select count(award) from nf1_performances) rows with ties;
+np_award varchar(20);
+np_categorie varchar(1000);
+np_artiste varchar(1000);
+np_titre varchar(1000);
+  
+BEGIN
+
+open c7;
+
+for i in 1..950 loop
+fetch c7 into np_award, np_categorie, np_artiste, np_titre;
+exit when c7%notfound;
+
+insert into NF1_1_performances
+select np_award, np_categorie,np_artiste, regexp_substr(np_titre,'[^;]+', 1, level) from dual
+      connect by regexp_substr(np_titre, '[^;]+', 1, level) is not null ;
+      
+commit;
+end loop;
+close c7;
+
+END;
+
+
+
