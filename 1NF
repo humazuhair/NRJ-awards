@@ -1,83 +1,72 @@
---table trophee en 1NF
-
-create table M1_Trophee(
-award  varchar2(5),
-dateA varchar(10),
-vainqueur varchar2(100),
-titrevainqueur varchar2(100),
-categorie varchar2(100),
-nomines varchar2(300),
-titre varchar2(100),
-audience varchar2(15) , 
-artistesPresents varchar2(1000),
-remiseTrophee varchar2(100),
-artiste varchar2(1000),
-titreP varchar2(100),
-partdemarche varchar2(100),
-sponsors varchar2(150),
-lieu varchar2(50),
-diffusion varchar2(150),
-production varchar2(100),
-realisation varchar2(100),
-presentateur  varchar2(50)
-);
-
-------------------
+-- Mise en 1nf
 
 drop table NF_nomines;
-create table NF_nomines(
- "award"  varchar2(5),
- "dateA" varchar2(10),
- "vainqueur" varchar2(300),
- "categorie" varchar2(1000),
- "nomines" varchar2(1000),
- "presentateur" varchar2(200)
-
-);
-
-drop table  NF_artistesPresents;
-create table NF_artistesPresents(
-"award" varchar2(5),
-"categorie" varchar2(1000),
- "artistesPresents" varchar2(3000)
-);
-
- drop table NF_Sponsors;
-create table NF_Sponsors(
- "award" VARCHAR2(5), 
-   "categorie" VARCHAR2(1000),
-   "Sponsors" VARCHAR2(1000)
-   
-   );
-
 drop table NF_performances;
-create table NF_performances(
- "award" VARCHAR2(5), 
-   "categorie" VARCHAR2(1000),
-   "performances" VARCHAR2(3000)
-   
-   );
-   
+drop table  NF_artistesPresents;
+ drop table NF_Sponsors;
+drop table NF1_remisetrophee;
+drop table nf_realisation;
 drop table NF1_performances;
-create table NF1_performances(
-   award VARCHAR2(5), 
-   categorie VARCHAR2(100),
-   artiste VARCHAR2(300),
-   titre varchar2(300)
-   
-   );
+ drop table nf1_1_performances;
+ drop table NF1_nomines;
+ drop table nf1_vainqueur;
+ 
+create table NF_nomines(
+ award  varchar2(5),
+ dateA varchar2(10),
+ vainqueur varchar2(300),
+ categorie varchar2(1000),
+ nomines varchar2(1000),
+ presentateur varchar2(200)
 
-insert into NF1_performances select distinct  "award","categorie", Substr("performances",1,Instr("performances",'-')-1) artiste,
-             Substr("performances",Instr("performances",'-')+1,999) titre from Nf_performances;
-             
-drop table NF1_representants;
-create table NF1_representants(
-	"pays" varchar2(1000),
-	"continent" varchar2(500),
-    "artiste" varchar2(2000)
 );
 
-  
+
+create table NF_artistesPresents(
+ award varchar2(5),
+ categorie varchar2(1000),
+ artistesPresents varchar2(3000)
+);
+
+
+create table NF_performances(
+ award varchar2(5),
+   categorie varchar2(1000),
+   performances VARCHAR2(3000)
+   
+   );
+   
+
+create table NF_Sponsors(
+  award varchar2(5),
+   categorie varchar2(1000),
+   Sponsors VARCHAR2(1000)
+   
+   );
+   
+
+create table NF1_representants(
+	pays varchar2(1000),
+	continent varchar2(500),
+    artiste varchar2(2000)
+);
+
+
+create table NF1_remisetrophee(
+ award varchar2(5),
+ categorie varchar2(1000),
+ remisetrophee VARCHAR2(1000)
+);
+
+create table NF_realisation(
+ award varchar2(5),
+ categorie varchar2(1000),
+ realisation VARCHAR2(1000)
+);
+
+ 
+
+
 DECLARE
    CURSOR c1 is
       select award,dateA,vainqueur,categorie,nomines,presentateur from trophee order by nomines FETCH FIRST (select count(award) from trophee) ROWS WITH TIES;
@@ -111,6 +100,18 @@ DECLARE
 	R_pays  varchar2(1000);
 	R_continent varchar2(500);
      R_artiste  varchar2(2000);
+     
+     cursor c6 is 
+    select award,categorie, remisetrophee from trophee order by remiseTrophee fetch first (select count(award) from trophee) rows with ties;
+     RT_award varchar(5);
+     RT_categorie varchar(1000);
+     RT_remisetrophee varchar(1000);
+     
+    cursor c7 is 
+    select award,categorie, realisation from trophee order by realisation fetch first (select count(award) from trophee) rows with ties;
+     RN_award varchar(5);
+     RN_categorie varchar(1000);
+     RN_realisation varchar(1000);
   
 BEGIN
    OPEN c1;
@@ -181,49 +182,77 @@ BEGIN
       COMMIT;
    END LOOP;
    CLOSE c5;
-END;
+   
+    open c6;
 
-----------------code remisetrophee
+   for i in 1..194 loop
+        fetch c6 into rt_award, rt_categorie, rt_remisetrophee;
+      exit when c6%notfound;
 
-drop table NF1_remisetrophee;
-create table NF1_remisetrophee(
-	"award" VARCHAR2(5), 
-   "categorie" VARCHAR2(1000),
-   "remisetrophee" VARCHAR2(1000)
-);
- 
-DECLARE
-
-cursor c6 is 
-select award,categorie, remisetrophee 
-from trophee
-order by vainqueur
-fetch first (select count(award) from trophee) rows with ties;
-RT_award varchar(5);
-RT_categorie varchar(1000);
-RT_remisetrophee varchar(1000);
-
-  
-BEGIN
-
-open c6;
-
-for i in 1..16 loop
-fetch c6 into rt_award, rt_categorie, rt_remisetrophee;
-exit when c6%notfound;
-
-insert into NF1_remisetrophee
-select rt_award, rt_categorie, regexp_substr(rt_remisetrophee,'[^,]+', 1, level) from dual
+      insert into NF1_remisetrophee select rt_award, rt_categorie, regexp_substr(rt_remisetrophee,'[^,]+', 1, level) from dual
       connect by regexp_substr(rt_remisetrophee, '[^,]+', 1, level) is not null ;
       
-commit;
-end loop;
-close c6;
+         commit;
+       end loop;
+       close c6;
+       
+      open c7;
 
+   for i in 1..194 loop
+        fetch c7 into rn_award, rn_categorie, rn_realisation;
+      exit when c7%notfound;
+
+      insert into NF_realisation select rn_award, rn_categorie, regexp_substr(rn_realisation,'[^,]+', 1, level) from dual
+      connect by regexp_substr(rn_realisation, '[^,]+', 1, level) is not null ;
+      
+         commit;
+       end loop;
+       close c7;
 END;
 
 
- drop table nf1_1_performances;
+
+select award, remisetrophee from trophee;
+
+
+
+create table NF1_nomines(
+  award  varchar2(5),
+dateA varchar(10),
+vainqueur varchar2(100),
+titrevainqueur varchar2(100),
+categorie varchar2(100),
+nomines varchar2(300),
+ titre varchar2(100),
+ presentateur varchar2(200)
+
+);
+
+insert into nf1_nomines (SELECT award, dateA,Substr(vainqueur,1,Instr(vainqueur,'-')-1),
+             Substr(vainqueur,Instr(vainqueur,'-')+1,999) ,categorie, Substr(nomines,1,Instr(nomines,'-')-1),
+             Substr(nomines,Instr(nomines,'-')+1,999),
+        presentateur
+FROM nf_nomines where categorie in ('Chanson francophone de l''année','Clip de l''année','Performance francophone de la soirée','Chanson internationale de l''année','Album francophone de l''année','Album international de l''année', 'Hit de l''année'));
+
+insert into nf1_nomines(award,dateA,vainqueur,categorie,nomines,presentateur) select * from nf_nomines  where categorie not in ('Chanson francophone de l''année','Clip de l''année','Performance francophone de la soirée','Hit de l''année','Chanson internationale de l''année','Album francophone de l''année','Album international de l''année');
+
+
+
+ 
+create table NF1_performances(
+   award VARCHAR2(5), 
+   categorie VARCHAR2(100),
+   artiste VARCHAR2(300),
+   titre varchar2(300)
+   
+   );
+
+             
+  insert into NF1_performances select distinct  award,categorie, Substr(performances,1,Instr(performances,'-')-1) artiste,
+  Substr(performances,Instr(performances,'-')+1,999) titre from Nf_performances;
+             
+             
+
  create table nf1_1_performances(
  AWARD           VARCHAR2(5)  , 
 CATEGORIE       VARCHAR2(100) ,
@@ -231,35 +260,143 @@ ARTISTE         VARCHAR2(300) ,
 TITRE           VARCHAR2(300)
 );
 
+create table nf1_vainqueur(
+AWARD           VARCHAR2(5)  , 
+dateA varchar(10),
+vainqueur          VARCHAR2(300),
+titrevainqueur varchar2(100),
+categorie varchar2(100),
+nomines varchar2(300),
+ titre varchar2(100),
+ presentateur varchar2(200)
+);
+
 DECLARE
 
 cursor c7 is 
-select award,categorie, artiste, titre 
-from nf1_performances
-order by artiste
-fetch first (select count(award) from nf1_performances) rows with ties;
+select award,categorie, artiste, titre from nf1_performances order by titre fetch first (select count(award) from nf1_performances) rows with ties;
 np_award varchar(20);
 np_categorie varchar(1000);
 np_artiste varchar(1000);
 np_titre varchar(1000);
-  
+
+cursor c2 is 
+select award,dateA,vainqueur,titrevainqueur ,categorie,nomines,titre,presentateur from nf1_nomines order by vainqueur fetch first (select count(award) from nf1_nomines) rows with ties;
+v_award varchar(20);
+v_dateA varchar(10);
+v_vainqueur varchar(1000);
+v_titrevainqueur varchar2(100);
+v_categorie varchar2(100);
+v_nomines varchar2(300);
+v_titre varchar2(100);
+v_presentateur varchar2(200);
+
 BEGIN
 
 open c7;
 
-for i in 1..950 loop
+for i in 1..3586 loop
 fetch c7 into np_award, np_categorie, np_artiste, np_titre;
 exit when c7%notfound;
 
 insert into NF1_1_performances
-select np_award, np_categorie,np_artiste, regexp_substr(np_titre,'[^;]+', 1, level) from dual
-      connect by regexp_substr(np_titre, '[^;]+', 1, level) is not null ;
+select np_award, np_categorie,np_artiste, regexp_substr(np_titre,'[^;]+', 1, level) from dual where np_titre is not null
+      connect by regexp_substr(np_titre, '[^;]+', 1, level) is not null;
       
 commit;
 end loop;
 close c7;
 
+open c2;
+
+for i in 1..297 loop
+fetch c2 into v_award, v_dateA, v_vainqueur,v_titrevainqueur ,v_categorie,v_nomines,v_titre,v_presentateur ;
+exit when c2%notfound;
+
+insert into NF1_vainqueur
+select  v_award, v_dateA, regexp_substr( v_vainqueur,'[^,]+', 1, level),v_titrevainqueur ,v_categorie,v_nomines,v_titre,v_presentateur  from dual where v_vainqueur is not null
+      connect by regexp_substr( v_vainqueur, '[^,]+', 1, level) is not null;
+      
+commit;
+end loop;
+close c2;
+
 END;
+  
 
 
 
+
+
+
+
+drop table M_trophee;
+drop table M_trophee_1;
+drop table M1_trophee;
+drop table NF1_representants;
+
+
+create table M_Trophee(
+award  varchar2(5),
+dateA varchar2(10),
+vainqueur varchar2(100),
+titrevainqueur varchar2(100),
+categorie varchar2(100),
+nomines varchar2(300),
+titre varchar2(100),
+artistesPresents varchar2(1000),
+sponsors varchar2(150),
+realisation varchar2(100),
+presentateur varchar2(50)
+);
+
+insert into M_trophee select distinct award,dateA,vainqueur,titrevainqueur,categorie,nomines,titre,artistesPresents,Sponsors,realisation,presentateur from NF1_vainqueur join NF_artistesPresents using(award,categorie) join nf_sponsors using(award,categorie) join nf_realisation using (award,categorie) ;
+
+select distinct award from nf_realisation;
+
+create table M_trophee_1(
+award  varchar2(5),
+categorie varchar2(100),
+audience varchar2(15) , 
+remiseTrophee varchar2(1000),
+artiste varchar2(1000),
+titreP varchar2(1000),
+partdemarche varchar2(1000),
+lieu varchar2(50),
+diffusion varchar2(1000),
+production varchar2(1000)
+);
+
+insert into M_trophee_1
+select distinct award,categorie,audience,nf1_remisetrophee.remiseTrophee,artiste,titre,partdemarche,lieu,Substr(diffusion, 1, Instr(diffusion, ',') - 1) diffusion,production from nf1_1_performances join trophee using(award,categorie)join nf1_remisetrophee using(award,categorie)
+ union 
+ select distinct award,categorie,audience,nf1_remisetrophee.remiseTrophee,artiste,titre,partdemarche,lieu,Substr(diffusion,Instr(diffusion, ',')+1,999) diffusion,production from nf1_1_performances join trophee using(award,categorie) join nf1_remisetrophee using(award,categorie);
+
+
+
+
+create table M1_Trophee(
+award  varchar2(5),
+dateA varchar(10),
+vainqueur varchar2(100),
+titrevainqueur varchar2(100),
+categorie varchar2(100),
+nomines varchar2(300),
+titre varchar2(100),
+audience varchar2(15) , 
+artistesPresents varchar2(1000),
+remiseTrophee varchar2(100),
+Performances  varchar2(1000),
+titreP varchar2(100),
+partdemarche varchar2(100),
+sponsors varchar2(150),
+lieu varchar2(50),
+diffusion varchar2(150),
+production varchar2(100),
+realisation varchar2(100),
+presentateur  varchar2(50)
+);
+
+insert into M1_trophee select distinct award,dateA,vainqueur,titrevainqueur,categorie,nomines,titre,audience,artistesPresents,remiseTrophee,artiste,titreP,partdemarche,Sponsors,lieu,diffusion,production,realisation,presentateur from M_trophee join M_trophee_1 using (award,categorie);
+
+ update  M1_trophee set nomines=' ' where nomines is null;
