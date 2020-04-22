@@ -30,6 +30,17 @@ lieu varchar(20),
 
 insert into award3nf (select distinct award, presentateur, production, audience, partdemarche, lieu from m1_trophee);
 
+drop table nomines3nf;
+create table nomines3nf(
+datea varchar(20),
+categorie varchar(20),
+nomines varchar(20),
+titrenomines varchar(20),
+foreign key(datea, categorie) references datecategorie3nf(datea, categorie)
+);
+
+insert into nomines3nf (select distinct datea, categorie, nomines, titre from  m1_trophee);
+
 drop table artistepresent3nf;
 create table artistepresent3nf(
 datea varchar(20),
