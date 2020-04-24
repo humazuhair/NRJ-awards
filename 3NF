@@ -53,10 +53,9 @@ insert into artistepresent3nf(select distinct datea, artistespresents from m1_tr
 drop table performances3nf;
 create table performances3nf(
 datea varchar(20),
-categorie varchar(20),
 performances varchar(20),
 titreperformances varchar(20),
-foreign key(datea, categorie) references datecategorie3nf (datea, categorie)
+foreign key(datea) references date3nf (datea)
 );
 
 insert into performances3nf (select distinct datea, categorie, performances, titrep from m1_trophee);
