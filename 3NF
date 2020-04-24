@@ -58,7 +58,7 @@ titreperformances varchar(20),
 foreign key(datea) references date3nf (datea)
 );
 
-insert into performances3nf (select distinct datea, categorie, performances, titrep from m1_trophee);
+insert into performances3nf (select distinct datea, performances, titrep from m1_trophee);
 
 drop table trophee3nf;
 create table trophee3nf(
