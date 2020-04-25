@@ -1,4 +1,5 @@
 
+drop table date3nf;
 create table date3nf(
 dateA VARCHAR(20) primary key,
 award VARCHAR(20)
@@ -73,3 +74,13 @@ foreign key(datea, categorie) references datecategorie3nf(datea, categorie)
 
 insert into trophee3nf (select distinct datea, categorie, sponsors, realisation, production, diffusion from m1_trophee);
 
+drop table remisetrophee3nf;
+create table remisetrophee3nf(
+    datea varchar(10),
+    vainqueur varchar2(100),
+    remisetrophee varchar2(100) primary key,
+    foreign key (vainqueur) references datecategorie3nf (vainqueur),
+    foreign key (datea) references award3nf (datea)
+);
+
+insert into remisetrophee3nf select distinct datea, vainqueur, remiseTrophee from m1_Trophee;
