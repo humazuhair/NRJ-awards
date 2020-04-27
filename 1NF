@@ -1,19 +1,21 @@
 -- Mise en 1NF
+
 --Creation des tables temporaires pour mise en 1NF de la table de base
-drop table if exists NF_nomines;
-drop table if exists NF_performances;
-drop table if exists  NF_artistesPresents;
- drop table if exists NF_Sponsors;
-drop table if exists NF1_remisetrophee;
-drop table if exists nf_realisation;
-drop table if exists NF1_performances;
- drop table if exists nf1_1_performances;
- drop table if exists NF1_nomines;
- drop table if exists nf1_vainqueur;
-drop table if exists M_trophee;
-drop table if exists M_trophee_1;
-drop table if exists M1_trophee;
-drop table if exists NF1_representants;
+
+drop table NF_nomines;
+drop table NF_performances;
+drop table NF_artistesPresents;
+ drop table NF_Sponsors;
+drop table NF1_remisetrophee;
+drop table nf_realisation;
+drop table NF1_performances;
+ drop table nf1_1_performances;
+ drop table NF1_nomines;
+ drop table nf1_vainqueur;
+drop table M_trophee;
+drop table M_trophee_1;
+drop table M1_trophee;
+drop table NF1_representants;
 
 --separer les noms de nomines pour enlever les virgules
 
